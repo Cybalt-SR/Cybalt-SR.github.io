@@ -52,6 +52,10 @@ body {
 	perspective: 2px;
 }
 
+[role=main] > section, footer{
+	transform: translateZ(0);
+}
+
 a:focus {
 	outline: thin dotted
 }
@@ -40008,14 +40012,14 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 }
 
 .parallaxdivider::before {
-	height:120%;
+	height:50vh;
 	content: " ";
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	transform: translateY(50px) translateZ(-1px) scale(2);
+	transform: translateY(0) translateZ(-1px) scale(2);
 	background-size: cover;
 	z-index: -1 !important;
 
@@ -40024,9 +40028,16 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 	background-position: bottom;
 }
 
-.yaqOZd.LB7kq.cJgDec.parallaxdivider::before{
+.yaqOZd.LB7kq.cJgDec.nyKByd.O13XJf.KEFykf.parallaxdivider::before{
+	height:100vh;
+
 	background-position: bottom;
-	transform: translateY(-150px) translateZ(-2px) scale(2);
+	transform: translateY(0px) translateZ(-2px) scale(2.1) !important;
+}
+
+.lower.parallaxdivider::before{
+	height:150%;
+	transform: translateY(50px) translateZ(-1px) scale(2) !important;
 }
 
 sentinel {}
