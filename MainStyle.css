@@ -11,7 +11,8 @@ main,
 nav,
 section,
 summary {
-	display: block
+	display: block;
+	z-index: 999;
 }
 
 audio,
@@ -32,9 +33,7 @@ audio:not([controls]) {
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-
-	overflow-y: hidden;
+	-webkit-text-size-adjust: 100%
 }
 
 ::selection {
@@ -43,11 +42,14 @@ html {
 
 body {
 	margin: 0;
-	overflow-y: scroll;
 }
 
-html, body{
-	height: 100%;
+[role=main]{
+	background-color: rgba(28, 28, 28, 1);
+	height: 100vh;
+  	overflow-x: hidden;
+	  overflow-y: auto;
+	perspective: 2px;
 }
 
 a:focus {
@@ -11133,15 +11135,8 @@ footer,
 	outline: none
 }
 
-footer.zlaBJ {
-	max-height: 20vh;
-	overflow: scroll;
-	transition: max-height .5s cubic-bezier(0.4, 0, 0.2, 1)
-}
-
-footer.zlaBJ.NylyXe {
-	max-height: 0;
-	transition: max-height .5s cubic-bezier(0.4, 0, 0.2, 1)
+footer > section{
+	height:100%;
 }
 
 .Xpil1b {
@@ -40008,20 +40003,28 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 	max-width: 45% !important;
 }
 
-.windowsection{
-	height: 200px;
+.parallax{
+	height: 250px;
+	transform-style: preserve-3d;
 }
 
-.windowsection > div{
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center center;
-	background-image: url(Home/homebannerimage.jpg);
+.parallax::after {
+	height:110%;
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: translateY(80px) translateZ(-1px) scale(2);
+	background-size: 200%;
+	z-index: -1 !important;
+}
 
-	overflow: hidden;
+.bg::after {
+	background-image: url(Home/homebannerimage.jpg);
+	background-size: cover;
+	background-position: bottom;
 }
 
 sentinel {}
