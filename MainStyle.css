@@ -40006,6 +40006,9 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 }
 
 .windowsection > div{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center center;
