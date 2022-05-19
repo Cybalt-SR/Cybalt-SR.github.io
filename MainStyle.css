@@ -48,6 +48,7 @@ body {
 	background-color: rgba(28, 28, 28, 1);
 	height: 100vh;
   	overflow-x: hidden;
+	overflow-y: scroll;
 	perspective: 2px;
 }
 
@@ -40003,7 +40004,6 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 }
 
 .parallax{
-	height: 250px;
 	transform-style: preserve-3d;
 }
 
