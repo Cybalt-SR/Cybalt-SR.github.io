@@ -48,7 +48,6 @@ body {
 	background-color: rgba(28, 28, 28, 1);
 	height: 100vh;
   	overflow-x: hidden;
-	overflow-y: scroll;
 	perspective: 2px;
 }
 
@@ -1794,7 +1793,12 @@ ul ul {
 
 .mYVXT {
 	display: table-cell;
-	width: 100%
+	vertical-align: middle;
+	width: 100%;
+}
+
+footer > section > .mYVXT{
+	vertical-align: top;
 }
 
 .zfr3Q {
@@ -11139,11 +11143,11 @@ footer,
 }
 
 footer{
-	height:40vh;
+	height:50vh;
 }
 
 footer > section{
-
+	
 	height:100%;
 }
 
