@@ -48,7 +48,6 @@ body {
 	background-color: rgba(28, 28, 28, 1);
 	height: 100vh;
   	overflow-x: hidden;
-	  overflow-y: auto;
 	perspective: 2px;
 }
 
