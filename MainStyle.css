@@ -1794,7 +1794,6 @@ ul ul {
 
 .mYVXT {
 	display: table-cell;
-	vertical-align: middle;
 	width: 100%
 }
 
@@ -11139,7 +11138,12 @@ footer,
 	outline: none
 }
 
+footer{
+	height:40vh;
+}
+
 footer > section{
+
 	height:100%;
 }
 
