@@ -40001,11 +40001,15 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 	max-width: 45% !important;
 }
 
-.windowsection > .IFuOkc{
-	background-image: url('Home/homebannerimage.jpg'); 
+.windowsection{
+	height: 200px;
+}
+
+.windowsection > div{
 	background-size: cover;
 	background-attachment: fixed;
-	margin: 0px 0px 0px 0px;
+	background-position: center center;
+	background-image: url(Home/homebannerimage.jpg);
 }
 
 sentinel {}
