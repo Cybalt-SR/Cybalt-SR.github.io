@@ -40013,6 +40013,8 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 	background-attachment: fixed;
 	background-position: center center;
 	background-image: url(Home/homebannerimage.jpg);
+
+	overflow: hidden;
 }
 
 sentinel {}
