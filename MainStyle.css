@@ -39984,6 +39984,12 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 	justify-content: center;
 }
 
+.centerflexcontainer > .tyJCtd.mGzaTb.baZpAe {
+    flex-grow: 1 !important;
+
+	min-height: 70vh;
+}
+
 .hJDwNd-AhqUyc-c5RTEf.purZT-AhqUyc-c5RTEf.pSzOP-AhqUyc-c5RTEf.JNdkSc.CENy8b {
     flex-grow: 1 !important;
 	min-width: 300px !important;
