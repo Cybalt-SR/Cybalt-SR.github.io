@@ -40003,27 +40003,30 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 	max-width: 45% !important;
 }
 
-.parallax{
+.parallaxdivider{
 	transform-style: preserve-3d;
 }
 
-.parallax::after {
-	height:110%;
+.parallaxdivider::before {
+	height:120%;
 	content: " ";
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	transform: translateY(80px) translateZ(-1px) scale(2);
-	background-size: 200%;
+	transform: translateY(50px) translateZ(-1px) scale(2);
+	background-size: cover;
 	z-index: -1 !important;
-}
 
-.bg::after {
 	background-image: url(Home/homebannerimage.jpg);
 	background-size: cover;
 	background-position: bottom;
+}
+
+.yaqOZd.LB7kq.cJgDec.parallaxdivider::before{
+	background-position: bottom;
+	transform: translateY(-150px) translateZ(-2px) scale(2);
 }
 
 sentinel {}
