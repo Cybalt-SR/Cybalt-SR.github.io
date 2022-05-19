@@ -75,7 +75,10 @@
       newsrc += '&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=';
       newsrc += embed.offsetHeight + '';
       embed.src = newsrc;
-">
+      "
+      
+      onload="this.onresize();"
+      >
 
   <div jscontroller="pc62j" jsmodel="iTeaXe" jsaction="rcuQ6b:WYd;GvneHb:og1FDd;vbaUQc:uAM5ec;">
     <div jscontroller="X4BaPc"
@@ -635,14 +638,13 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
                             <div id="h.76d9053b741bb860_212"
                               class="hJDwNd-AhqUyc-EehZO jXK9ad D2fZ2 OjCsFc wHaque GNzUNc">
                               <div class="jXK9ad-SmKAyb centerflexcontainer">
-                                <div class="tyJCtd mGzaTb baZpAe">
+                                <div class="tyJCtd mGzaTb baZpAe" style = "max-width: 500px;">
                                   <iframe src=""
                                   id="fbembed"
                                   scrolling="yes"
                                   style="border:none; overflow:hidden; width:100%; height:100%; background: white; float:left; "
                                   allowtransparency="true"
                                   frameborder="0"
-                                  onload="document.getElementById('u_0_1a_/h').firstChild.firstChild.style.width = '100%';"
                                   >
                                   </iframe>
                                 </div>
@@ -674,8 +676,9 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
           </div>
         </div>
       </div>
+
       <script nonce="glwoBbcIOB2z1PDZiCaSbA">DOCS_timing['cov'] = new Date().getTime();</script>
-      <script id="base-js" nonce="glwoBbcIOB2z1PDZiCaSbA">var _F_jsUrl = '/_/atari/_/js/k=';
+      <script id="base-js" nonce="LWmRM+wXXbqaGd2FyMwVhg">var _F_jsUrl = '/_/atari/_/js/k=';
         "use strict"; this.default_tk = this.default_tk || {}; (function (_) {
           var window = this;
           try {
@@ -769,7 +772,7 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
               if ("math" == a) return new Set; if ("main" == a) return new Set(Zd); var b = new Set("alert alertdialog group log radiogroup status FIELDSET".split(" ")); if ($d.has(a) || ae.has(a)) { var c = [b]; -1 < String(a).indexOf("dialog") ? (c.push("dialog"), c.push("DIALOG")) : b.has(a) || c.push("search"); return Jd(be, [Zd], c) } if ("presentation" == a || "none" == a) return Tba; b = $d.has(a) ? new Set(Zd) : Jd(Zd, [be]); var d = function (e, f) {
                 [].concat(_.od(Sba(e).values())).reduce(function (g, k) {
                   k instanceof Set ? g = g.concat([].concat(_.od(k.values()))) :
-                    g.push(k); return g
+                  g.push(k); return g
                 }, []).forEach(function (g) { f.has(g) || (f.add(g), "presentation" != g && "none" != g && d(g, f)) })
               }; d(a, b); "gridcell" == a ? b.delete("table") : "cell" == a && b.delete("grid"); "button" != a && "link" != a && "checkbox" != a && "switch" != a || Jd(b, ["alertdialog", "heading", "toolbar", ce], [], !0); return b
             };
@@ -863,7 +866,7 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
               if (function () { if (!a || "function" != typeof a || !a.prototype.entries || "function" != typeof Object.seal) return !1; try { var c = Object.seal({ x: 4 }), d = new a(_.B([c])); if (!d.has(c) || 1 != d.size || d.add(c) != d || 1 != d.size || d.add({ x: 4 }) != d || 2 != d.size) return !1; var e = d.entries(), f = e.next(); if (f.done || f.value[0] != c || f.value[1] != c) return !1; f = e.next(); return f.done || f.value[0] == c || 4 != f.value[0].x || f.value[1] != f.value[0] ? !1 : e.next().done } catch (g) { return !1 } }()) return a; var b = function (c) {
                 this.B = new Map; if (c) {
                   c =
-                    _.B(c); for (var d; !(d = c.next()).done;)this.add(d.value)
+                  _.B(c); for (var d; !(d = c.next()).done;)this.add(d.value)
                 } this.size = this.B.size
               }; b.prototype.add = function (c) { c = 0 === c ? 0 : c; this.B.set(c, c); this.size = this.B.size; return this }; b.prototype.delete = function (c) { c = this.B.delete(c); this.size = this.B.size; return c }; b.prototype.clear = function () { this.B.clear(); this.size = 0 }; b.prototype.has = function (c) { return this.B.has(c) }; b.prototype.entries = function () { return this.B.entries() }; b.prototype.values = function () { return this.B.values() }; b.prototype.keys = b.prototype.values;
               b.prototype[Symbol.iterator] = b.prototype.values; b.prototype.forEach = function (c, d) { var e = this; this.B.forEach(function (f) { return c.call(d, f, f, e) }) }; return b
@@ -2134,7 +2137,7 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
                     } else if ("click" == k || "dblclick" == k || "mousedown" == k || "mouseover" == k || "mouseout" == k ||
                       "mousemove" == k) g = Saa(f, g); else if ("focus" == k || "blur" == k || "focusin" == k || "focusout" == k || "scroll" == k) document.createEvent ? (e = document.createEvent("UIEvent"), e.initUIEvent(g || f.type, void 0 !== f.bubbles ? f.bubbles : !0, f.cancelable || !1, f.view || window, f.detail || 0)) : (e = document.createEventObject(), e.type = g || f.type, e.bubbles = void 0 !== f.bubbles ? f.bubbles : !0, e.cancelable = f.cancelable || !1, e.view = f.view || window, e.detail = f.detail || 0), e.relatedTarget = f.relatedTarget || null, e.Tr = f.timeStamp, g = e; else if ("_custom" == k) {
                         g =
-                          { _type: g, type: g, data: f.detail.data, Bga: f.detail.triggeringEvent }; try { e = document.createEvent("CustomEvent"), e.initCustomEvent("_custom", !0, !1, g) } catch (u) { e = document.createEvent("HTMLEvents"), e.initEvent("_custom", !0, !1), e.detail = g } g = e; g.Tr = f.timeStamp
+                        { _type: g, type: g, data: f.detail.data, Bga: f.detail.triggeringEvent }; try { e = document.createEvent("CustomEvent"), e.initCustomEvent("_custom", !0, !1, g) } catch (u) { e = document.createEvent("HTMLEvents"), e.initEvent("_custom", !0, !1), e.detail = g } g = e; g.Tr = f.timeStamp
                       } else document.createEvent ? (e = document.createEvent("Event"), e.initEvent(g || f.type, !0, !0)) : (e = document.createEventObject(), e.type = g || f.type), e.Tr = f.timeStamp, g = e; d = d.targetElement; f = g; d instanceof Node && document.contains && document.contains(d); d.dispatchEvent ?
                         d.dispatchEvent(f) : d.fireEvent("on" + f.type, f)
                   } else c.push(d)
@@ -2195,7 +2198,7 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
               var c = []; _.vi(_.oc.Ka(), b); var d = {}; b = _.B(b); for (var e = b.next(); !e.done; d = { Hv: d.Hv }, e = b.next())d.Hv = e.value, e = _.ol(d.Hv, a.B).Ta(function (f) {
                 return function (g) {
                   a.F[f.Hv] =
-                    g
+                  g
                 }
               }(d)), c.push(e); return _.yi(c)
             }, Zt = function (a, b, c) { b = Fna(a, b, void 0, void 0 === c ? !1 : c); null != b && a.Ca(b) }, Fna = function (a, b, c, d) {
@@ -2484,7 +2487,7 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
             var Qu = function () { return { $B: void 0, EM: !1, sy: !1, IE: !1, bA: !1, jn: !1 } }, qpa = function (a, b) { if (b) { b = _.B(npa); for (var c = b.next(); !c.done; c = b.next()); a.B.Fm() } }, vpa = function (a, b) { if ("keydown" !== b.type) { b = _.B(opa); for (var c = b.next(); !c.done; c = b.next())a.B.xO(c.value, a.U) } }, spa = function (a) { for (var b = _.B(npa), c = b.next(); !c.done; c = b.next()); a.B.Fm() }, tpa = function (a) { for (var b = _.B(opa), c = b.next(); !c.done; c = b.next())a.B.MK(c.value, a.U) }, rpa = function (a) {
               var b = Pu.D; Object.keys(b).forEach(function (c) {
                 0 === c.indexOf("VAR_") &&
-                  a.B.fn(b[c], null)
+                a.B.fn(b[c], null)
               })
             }, upa = function (a, b) {
               if (!a.B.Vk()) {
@@ -2791,15 +2794,15 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
             _.rw.prototype.format = function (a, b) { if (!a) throw Error("Xb"); var c = b ? 6E4 * (a.getTimezoneOffset() - qw(b, a)) : 0, d = c ? new Date(a.getTime() + c) : a, e = d; b && d.getTimezoneOffset() != a.getTimezoneOffset() && (d = new Date(d.getTime() + 6E4 * (d.getTimezoneOffset() - a.getTimezoneOffset())), c += 0 < c ? -864E5 : 864E5, e = new Date(a.getTime() + c)); c = []; for (var f = 0; f < this.C.length; ++f) { var g = this.C[f].text; 1 == this.C[f].type ? c.push(era(this, g, a, d, e, b)) : c.push(g) } return c.join("") };
             var ara = function (a, b) { if (4 > b) var c = a.B.HH[b]; else if (8 > b) c = a.B.JJ[b - 4]; else if (12 > b) c = a.B.UQ[b - 8], c = c.replace("{1}", a.B.HH[b - 8]), c = c.replace("{0}", a.B.JJ[b - 8]); else { ara(a, 10); return } bra(a, c) }, tw = function (a, b) { b = String(b); a = a.B || _.iw; if (void 0 !== a.eX) { for (var c = [], d = 0; d < b.length; d++) { var e = b.charCodeAt(d); c.push(48 <= e && 57 >= e ? String.fromCharCode(a.eX + e - 48) : b.charAt(d)) } b = c.join("") } return b }, dra = !1, uw = function (a) { if (!(a.getHours && a.getSeconds && a.getMinutes)) throw Error("Yb"); }, era = function (a, b, c, d,
               e, f) {
-              var g = b.length; switch (b.charAt(0)) {
-                case "G": return c = 0 < d.getFullYear() ? 1 : 0, 4 <= g ? a.B.aR[c] : a.B.bR[c]; case "y": return c = d.getFullYear(), 0 > c && (c = -c), 2 == g && (c %= 100), tw(a, ch(c, g)); case "Y": return c = (new Date(Xqa(d.getFullYear(), d.getMonth(), d.getDate(), a.B.AA, a.B.Kv))).getFullYear(), 0 > c && (c = -c), 2 == g && (c %= 100), tw(a, ch(c, g)); case "M": a: switch (c = d.getMonth(), g) { case 5: a = a.B.kW[c]; break a; case 4: a = a.B.cW[c]; break a; case 3: a = a.B.vW[c]; break a; default: a = tw(a, ch(c + 1, g)) }return a; case "k": return uw(e), tw(a,
-                  ch(sw(e) || 24, g)); case "S": return tw(a, (e.getMilliseconds() / 1E3).toFixed(Math.min(3, g)).slice(2) + (3 < g ? ch(0, g - 3) : "")); case "E": return c = d.getDay(), 4 <= g ? a.B.ZW[c] : a.B.xW[c]; case "a": return uw(e), g = sw(e), a.B.pA[12 <= g && 24 > g ? 1 : 0]; case "b": return uw(e), g = sw(e), a.B.pA[12 <= g && 24 > g ? 1 : 0]; case "B": return uw(e), g = sw(e), a.B.pA[12 <= g && 24 > g ? 1 : 0]; case "h": return uw(e), tw(a, ch(sw(e) % 12 || 12, g)); case "K": return uw(e), tw(a, ch(sw(e) % 12, g)); case "H": return uw(e), tw(a, ch(sw(e), g)); case "c": a: switch (c = d.getDay(), g) {
-                    case 5: a =
-                      a.B.DW[c]; break a; case 4: a = a.B.GW[c]; break a; case 3: a = a.B.FW[c]; break a; default: a = tw(a, ch(c, 1))
-                  }return a; case "L": a: switch (c = d.getMonth(), g) { case 5: a = a.B.BW[c]; break a; case 4: a = a.B.AW[c]; break a; case 3: a = a.B.EW[c]; break a; default: a = tw(a, ch(c + 1, g)) }return a; case "Q": return c = Math.floor(d.getMonth() / 3), 4 > g ? a.B.wW[c] : a.B.qW[c]; case "d": return tw(a, ch(d.getDate(), g)); case "m": return uw(e), tw(a, ch(e.getMinutes(), g)); case "s": return uw(e), tw(a, ch(e.getSeconds(), g)); case "v": return (f || _.ow(c.getTimezoneOffset())).D;
-                case "V": return a = f || _.ow(c.getTimezoneOffset()), 2 >= g ? a.D : 0 < pw(a, c) ? void 0 !== a.B.ZQ ? a.B.ZQ : a.B.DST_GENERIC_LOCATION : void 0 !== a.B.DJ ? a.B.DJ : a.B.STD_GENERIC_LOCATION; case "w": return c = Xqa(e.getFullYear(), e.getMonth(), e.getDate(), a.B.AA, a.B.Kv), tw(a, ch(Math.floor(Math.round((c - (new Date((new Date(c)).getFullYear(), 0, 1)).valueOf()) / 864E5) / 7) + 1, g)); case "z": return a = f || _.ow(c.getTimezoneOffset()), 4 > g ? a.F[0 < pw(a, c) ? 2 : 0] : a.F[0 < pw(a, c) ? 3 : 1]; case "Z": return b = f || _.ow(c.getTimezoneOffset()), 4 > g ? (a = -qw(b, c),
-                  g = [0 > a ? "-" : "+"], a = Math.abs(a), g.push(ch(Math.floor(a / 60) % 100, 2), ch(a % 60, 2)), a = g.join("")) : a = tw(a, $qa(qw(b, c))), a; default: return ""
-              }
+                var g = b.length; switch (b.charAt(0)) {
+                  case "G": return c = 0 < d.getFullYear() ? 1 : 0, 4 <= g ? a.B.aR[c] : a.B.bR[c]; case "y": return c = d.getFullYear(), 0 > c && (c = -c), 2 == g && (c %= 100), tw(a, ch(c, g)); case "Y": return c = (new Date(Xqa(d.getFullYear(), d.getMonth(), d.getDate(), a.B.AA, a.B.Kv))).getFullYear(), 0 > c && (c = -c), 2 == g && (c %= 100), tw(a, ch(c, g)); case "M": a: switch (c = d.getMonth(), g) { case 5: a = a.B.kW[c]; break a; case 4: a = a.B.cW[c]; break a; case 3: a = a.B.vW[c]; break a; default: a = tw(a, ch(c + 1, g)) }return a; case "k": return uw(e), tw(a,
+                    ch(sw(e) || 24, g)); case "S": return tw(a, (e.getMilliseconds() / 1E3).toFixed(Math.min(3, g)).slice(2) + (3 < g ? ch(0, g - 3) : "")); case "E": return c = d.getDay(), 4 <= g ? a.B.ZW[c] : a.B.xW[c]; case "a": return uw(e), g = sw(e), a.B.pA[12 <= g && 24 > g ? 1 : 0]; case "b": return uw(e), g = sw(e), a.B.pA[12 <= g && 24 > g ? 1 : 0]; case "B": return uw(e), g = sw(e), a.B.pA[12 <= g && 24 > g ? 1 : 0]; case "h": return uw(e), tw(a, ch(sw(e) % 12 || 12, g)); case "K": return uw(e), tw(a, ch(sw(e) % 12, g)); case "H": return uw(e), tw(a, ch(sw(e), g)); case "c": a: switch (c = d.getDay(), g) {
+                      case 5: a =
+                        a.B.DW[c]; break a; case 4: a = a.B.GW[c]; break a; case 3: a = a.B.FW[c]; break a; default: a = tw(a, ch(c, 1))
+                    }return a; case "L": a: switch (c = d.getMonth(), g) { case 5: a = a.B.BW[c]; break a; case 4: a = a.B.AW[c]; break a; case 3: a = a.B.EW[c]; break a; default: a = tw(a, ch(c + 1, g)) }return a; case "Q": return c = Math.floor(d.getMonth() / 3), 4 > g ? a.B.wW[c] : a.B.qW[c]; case "d": return tw(a, ch(d.getDate(), g)); case "m": return uw(e), tw(a, ch(e.getMinutes(), g)); case "s": return uw(e), tw(a, ch(e.getSeconds(), g)); case "v": return (f || _.ow(c.getTimezoneOffset())).D;
+                  case "V": return a = f || _.ow(c.getTimezoneOffset()), 2 >= g ? a.D : 0 < pw(a, c) ? void 0 !== a.B.ZQ ? a.B.ZQ : a.B.DST_GENERIC_LOCATION : void 0 !== a.B.DJ ? a.B.DJ : a.B.STD_GENERIC_LOCATION; case "w": return c = Xqa(e.getFullYear(), e.getMonth(), e.getDate(), a.B.AA, a.B.Kv), tw(a, ch(Math.floor(Math.round((c - (new Date((new Date(c)).getFullYear(), 0, 1)).valueOf()) / 864E5) / 7) + 1, g)); case "z": return a = f || _.ow(c.getTimezoneOffset()), 4 > g ? a.F[0 < pw(a, c) ? 2 : 0] : a.F[0 < pw(a, c) ? 3 : 1]; case "Z": return b = f || _.ow(c.getTimezoneOffset()), 4 > g ? (a = -qw(b, c),
+                    g = [0 > a ? "-" : "+"], a = Math.abs(a), g.push(ch(Math.floor(a / 60) % 100, 2), ch(a % 60, 2)), a = g.join("")) : a = tw(a, $qa(qw(b, c))), a; default: return ""
+                }
             };
             var fra; fra = { cX: "y", Hda: "y G", Ida: "MMM y", dX: "MMMM y", Jda: "MM/y", MB: "MMM d", gca: "MMMM dd", hca: "M/d", dW: "MMMM d", jca: "MMM d, y", $W: "EEE, MMM d", Dda: "EEE, MMM d, y", Xaa: "d", ica: "MMM d, h:mm a zzzz" }; _.vw = fra; _.vw = fra;
             var gra = function (a) { return 1 == a % 10 && 11 != a % 100 ? "one" : 2 == a % 10 && 12 != a % 100 ? "two" : 3 == a % 10 && 13 != a % 100 ? "few" : "other" }, hra = gra; hra = gra;
@@ -2925,7 +2928,7 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
             var fx = function (a) {
               _.rl.call(this, a.Da); this.B = !1; this.ea = this.getData("triggerByHover").B(!1); this.qa = this.getData("triggerByFocus").B(!1); this.J = this.getData("alwaysShowTooltips").B(!1); this.I = this.O("kdb7zb"); this.L = this.getData("direction").gb(); this.D = this.O("doI4ab"); this.U = this.O("pQBZPb"); this.V = this.aa().find(".Ip8zfc.eLNT1d").Wc(); this.W = this.Xb("P9kZH"); this.H = !1; this.R = 0; this.ra = this.W.size(); this.C = this.R; this.ja = a.Aa.ee; this.ca = []; this.Ba = _.uc(_.vc(this).ab(function () {
                 this.C == this.R ?
-                  this.D.focus() : this.W.get(this.C - 1).focus()
+                this.D.focus() : this.W.get(this.C - 1).focus()
               })); this.xa = _.uc(_.vc(this).ab(this.Ha).jc()); _.wf(this, this.F.bind(this))
             }; _.C(fx, _.rl); fx.ua = function () { return { Aa: { ee: Tn } } }; var gx = function (a) { return "up" == a || "down" == a }; _.h = fx.prototype; _.h.qh = function (a) { (this.B = a) ? this.aa().Ca(psa) : (this.aa().Ca(osa), this.C = this.R, this.F()); this.xa() }; _.h.blur = function (a) { a = a.event; a = a.relatedTarget || a.explicitOriginalTarget; this.aa().el().contains(a) || this.qh(!1); this.J || this.F() };
             _.h.focus = function () { this.qa && !this.H && this.qh(!0) }; _.h.eh = function (a) { this.ea && !this.H && !this.B && this.qh(!0); this.nh(a) }; _.h.Vj = function () { this.ea && !this.H && this.qh(!1) }; _.h.Cf = function (a) { this.H = !0; this.nh(a) }; _.h.ki = function () { this.J || this.F() }; var rsa = function (a) { var b = _.Sk(a, "jva6de"); b.size() || (b = a.find(".Ip8zfc")); b.Ca(_.Kd) };
@@ -2936,7 +2939,7 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
             fx.prototype.Ha = function () {
               this.V && (_.Bc(this.U, "eLNT1d", this.B), _.Bc(this.V, "eLNT1d", !this.B)); this.U.getData("rotateIconOnOpen").B(!1) && _.Bc(this.U, "ReqAjb", this.B); this.B ? (this.I.Ma("eLNT1d"), _.L(function () { this.B && this.I.Pa("FVKzAb") }, 0, this), _.uc(_.vc(this).measure(function (a) { gx(this.L) ? a.height = this.D.el().getBoundingClientRect().height + this.I.el().getBoundingClientRect().height : a.width = this.D.el().getBoundingClientRect().width + this.I.el().getBoundingClientRect().width }).ab(function (a) {
                 gx(this.L) ?
-                  this.aa().Xa("height", a.height + "px") : this.aa().Xa("width", a.width + "px")
+                this.aa().Xa("height", a.height + "px") : this.aa().Xa("width", a.width + "px")
               }))(), this.J && ssa(this)) : (this.I.Ma("FVKzAb"), _.L(function () { this.B || this.I.Pa("eLNT1d") }, 200, this), this.aa().Xa({ height: "56px", width: "56px" }), this.F()); this.D.Ga("aria-expanded", this.B)
             }; fx.prototype.Vc = function () { return this.C }; _.N(fx.prototype, "yfqBxc", function () { return this.ki }); _.N(fx.prototype, "AHmuwe", function () { return this.focus }); _.N(fx.prototype, "I481le", function () { return this.Cc }); _.N(fx.prototype, "cOuCgd", function () { return this.click });
             _.N(fx.prototype, "p6p2H", function () { return this.Cf }); _.N(fx.prototype, "xniBle", function () { return this.N8 }); _.N(fx.prototype, "JywGue", function () { return this.Vj }); _.N(fx.prototype, "eGiyHb", function () { return this.nh }); _.N(fx.prototype, "tfO1Yc", function () { return this.eh }); _.N(fx.prototype, "MVOW3d", function () { return this.Vc }); _.N(fx.prototype, "O22p3e", function () { return this.blur }); _.am(qsa, fx);
