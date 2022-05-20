@@ -11,7 +11,20 @@ function togglesidebar() {
     }
 }
 
-function updatefbembed(){
+function toggledropdown(idmain, idbutton) {
+    var main = document.getElementById(idmain);
+    var button = document.getElementById(idbutton);
+
+    if (main.classList.contains("FWGjId") == false) {
+        main.classList.add('FWGjId');
+        button.classList.remove('FWGjId');
+    } else {
+        main.classList.remove('FWGjId');
+        button.classList.add('FWGjId');
+    }
+}
+
+function updatefbembed() {
     var embed = document.getElementById('fbembed');
     var newsrc = 'https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F306639766125525&width=';
     newsrc += embed.offsetWidth + '';
