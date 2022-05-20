@@ -1,11 +1,28 @@
+
+
+var navbarOpen = false;
+
+window.addEventListener('click', function (e) {
+    var navbar = document.getElementById('mainheader');
+
+    if (!navbar.contains(e.target) && navbarOpen) {
+        // Clicked in box
+        togglesidebar();
+    }
+});
+
 function togglesidebar() {
     var navbar = document.getElementById('yuynLe');
     var icon = document.getElementById('expandicon');
 
     if (navbar.classList.contains("jsnVQ") == false) {
+        navbarOpen = true;
+
         navbar.classList.add('jsnVQ');
         icon.classList.add('o0iVae');
     } else {
+        navbarOpen = false;
+
         navbar.classList.remove('jsnVQ');
         icon.classList.remove('o0iVae');
     }
