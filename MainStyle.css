@@ -39995,7 +39995,7 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 }
 
 .borderbox{
-	background: linear-gradient(180deg, rgba(4,100,4,0.1) 0%,#00000000 100px);
+	background: linear-gradient(0deg, rgba(4,100,4,0.2) 0%, rgba(4,100,4,0.01) 30px,#00000000 60%);
 	margin:5px;
 	margin-bottom: 10px;
 
@@ -40004,15 +40004,19 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 }
 
 .collapsible {
-  background: none;
-  cursor: pointer;
-  width: 100%;
-  outline: none;
-  border:none;
+	background: none;
+	cursor: pointer;
+	width: 100%;
+	outline: none;
+	border:none;
+	margin : 0;
+}
+.collapsible > element{
+	pointer-events: none;
 }
 
+
 .active, .collapsible:hover {
-  background-color: #555;
 }
 
 .content {

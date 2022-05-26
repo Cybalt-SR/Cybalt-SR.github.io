@@ -493,28 +493,8 @@
       role="region" class="IWfHH"></div>
   </div>
 
-  <script nonce="C/MwzEVb5V8bDJ8GXB/sFA">DOCS_timing['cov'] = new Date().getTime();</script>
   <script src="Javascript/frontend.js"></script>
   <script>
-    function ToggleCollapse () {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-
-      console.log("clicked something");
-    }
-
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", ToggleCollapse);
-    }
-
     function Loadministrycontent(data, name, id) {
       data = prepContent(data);
       var addition = "";
@@ -526,7 +506,9 @@
         var line = datas[i];
 
         if (i == 0) {
-          addition += '<div class="tyJCtd mGzaTb baZpAe"><h1 id="h.mldi3s5y49l5_l" dir="ltr" class="CDt4Ke zfr3Q duRjpb" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.2; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"><span class=" puwcIf" style="vertical-align: baseline;">';
+          addition += '<div class="tyJCtd mGzaTb baZpAe">'
+                      + '<h1 id="h.mldi3s5y49l5_l" dir="ltr" class="CDt4Ke zfr3Q duRjpb" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.2; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;">'
+                      + '<span class=" puwcIf" style="vertical-align: baseline;">';
           addition += line;
           addition += '</span></h1><div id="h.iaw99e555vc8" class="CobnVe aP9Z7e"></div></div>';
         }
@@ -542,21 +524,28 @@
         else if (line[0] == '{') {
           line = line.substring(1, line.length - 1);
 
-          addition += '<div class="';
+          addition += '<h2 class="';
 
           if (insidecollasible) {
             addition += 'collapsible ';
           }
 
-          addition += 'oKdM2c Kzv0Me"';
+          addition += 'Kzv0Me '
+                      + 'jXK9ad-SmKAyb '
+                      + 'hJDwNd-AhqUyc-EehZO jXK9ad D2fZ2 OjCsFc GNzUNc '
+                      + 'tyJCtd mGzaTb baZpAe '
+                      + '"';
 
           if (insidecollasible) {
-            addition += '';
+          addition += 'onclick="';
+          addition += "var content = this.nextElementSibling; if (content.style.maxHeight){content.style.maxHeight = null;} else {content.style.maxHeight = content.scrollHeight + 'px';}";
+          addition += 'console.log(123)';
+          addition += '"';
           }
 
-          addition += '><div id="h.6f68570a257062ce_149" class="hJDwNd-AhqUyc-EehZO jXK9ad D2fZ2 OjCsFc GNzUNc"><div class="jXK9ad-SmKAyb"><div class="tyJCtd mGzaTb baZpAe"><div id="h.94uiuq3ffanz" class="CobnVe aP9Z7e"></div><h2 id="h.94uiuq3ffanz_l" dir="ltr" class="CDt4Ke zfr3Q JYVBee">';
+          addition += '>';
           addition += line;
-          addition += '</h2></div></div></div></div>';
+          addition += '</h2>';
 
           if (insidecollasible) {
             addition += '<div class="content">';
