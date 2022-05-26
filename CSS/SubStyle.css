@@ -1,24 +1,24 @@
 @media only screen and (max-width: 479px) {
 	.FdCeP {
-		font-size: 33.0pt;
+		font-size: 33.0pt !important;
 	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	.FdCeP {
-		font-size: 41.0pt;
+		font-size: 41.0pt !important;
 	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
 	.FdCeP {
-		font-size: 48.0pt;
+		font-size: 48.0pt !important;
 	}
 }
 
 @media only screen and (min-width: 1280px) {
 	.FdCeP {
-		font-size: 48.0pt;
+		font-size: 48.0pt !important;
 	}
 }
 @media only screen and (max-width: 479px) {
