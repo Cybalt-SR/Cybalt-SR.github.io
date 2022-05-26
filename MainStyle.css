@@ -39994,12 +39994,31 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 	min-height: 700px;
 }
 
-.JNdkSc-SmKAyb > .borderbox{
+.borderbox{
+	background: linear-gradient(180deg, rgba(4,100,4,0.1) 0%,#00000000 100px);
 	margin:5px;
 	margin-bottom: 10px;
 
 	border-radius: 5px;
 	border: 2px solid rgba(0, 88, 1, 1);
+}
+
+.collapsible {
+  background: none;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  border:none;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
 }
 
 .hJDwNd-AhqUyc-c5RTEf.purZT-AhqUyc-c5RTEf.pSzOP-AhqUyc-c5RTEf.JNdkSc.CENy8b {
