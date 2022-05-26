@@ -41,6 +41,10 @@ function toggledropdown(idmain, idbutton) {
     }
 }
 
+function prepContent(data) {
+    return data.contentWindow.document.body.innerHTML.substring(59).slice(0, -6);
+}
+
 function updatefbembed() {
     var embed = document.getElementById('fbembed');
     var newsrc = 'https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F306639766125525&width=';
@@ -48,4 +52,21 @@ function updatefbembed() {
     newsrc += '&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=';
     newsrc += embed.offsetHeight + '';
     embed.src = newsrc;
+}
+
+var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+function loadVideo(iframe) {
+    $.getJSON(reqURL + iframe.getAttribute('cid'),
+        function (data) {
+            var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+            console.log(videoNumber);
+            var link = data.items[videoNumber].link;
+            id = link.substr(link.indexOf("=") + 1);
+            iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
+        }
+    );
+}
+var iframes = document.getElementsByClassName('latestVideoEmbed');
+for (var i = 0, len = iframes.length; i < len; i++) {
+    loadVideo(iframes[i]);
 }

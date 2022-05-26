@@ -131,26 +131,9 @@
                           </div>
 
                           <object data="About/aboutparagraph.txt" onload="
-                          LoadAboutPara(this.contentWindow.document.body.innerHTML.substring(59).slice(0, -6));
+                          LoadAboutPara(this);
                           this.remove();
                           "></object>
-
-                          <script>
-                            var heading = "";
-                            var paragraph = "";
-                            
-                            function LoadAboutPara(data){
-                              var datas = data.split(/\r?\n/);
-                              heading = datas[1];
-                              for (let i = 0; i < datas.length; i++) {
-                                paragraph += '<p dir="ltr" class="CDt4Ke zfr3Q" style="text-align: left;"><span style="font-size: 14pt; vertical-align: baseline;">';
-                                paragraph += datas[i];
-                                paragraph += '</span></p>';
-                              }
-
-                              document.getElementById("aboutparagraph").innerHTML = paragraph;
-                            }
-                          </script>
 
                           <div class="oKdM2c">
                             <div id="h.76d9053b741bb860_181" class="hJDwNd-AhqUyc-EehZO jXK9ad D2fZ2 wHaque GNzUNc">
@@ -293,31 +276,9 @@
               </section>
 
               <object data="About/pastoralteamlist.txt" onload="
-              LoadPastoralTeam(this.contentWindow.document.body.innerHTML.substring(59).slice(0, -6));
+              LoadPastoralTeam(this);
               this.remove();
               "></object>
-
-              <script>
-                function LoadPastoralTeam(data){
-                  var addition = "";
-
-                  var datas = data.split(/\r?\n/);
-                  for (let i = 0; i < datas.length; i++) {
-                    if(i % 2 == 0){
-                      addition += '<div class="tyJCtd mGzaTb baZpAe"><p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"><span style="font-size: 14pt; font-variant: normal; vertical-align: baseline;">';
-                      addition += datas[i];
-                      addition += '</span></p>';
-                    }
-                    else{
-                      addition += '<p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"><span style="font-family: &#39;Helvetica&#39;; font-size: 14pt; font-variant: normal; vertical-align: baseline;"><strong>';
-                      addition += datas[i];
-                      addition += '</strong></span></p></div>';
-                    }
-                  }
-
-                  document.getElementById("pastoralteamlist").innerHTML = addition + "";
-                }
-              </script>
 
               <section id="h.28d62b2957bfb16e_7" class="yaqOZd" style="">
                 <div class="IFuOkc"></div>
@@ -398,31 +359,9 @@
               </section>
 
               <object data="About/deaconlist.txt" onload="
-              LoadDeaconList(this.contentWindow.document.body.innerHTML.substring(59).slice(0, -6));
+              LoadDeaconList(this);
               this.remove();
               "></object>
-
-              <script>
-                function LoadDeaconList(data){
-                  var addition = "";
-
-                  var datas = data.split(/\r?\n/);
-                  for (let i = 0; i < datas.length; i++) {
-                    if(i % 2 == 0){
-                      addition += '<div class="tyJCtd mGzaTb baZpAe"><p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"><span style="font-size: 14pt; font-variant: normal; vertical-align: baseline;">';
-                      addition += datas[i];
-                      addition += '</span></p>';
-                    }
-                    else{
-                      addition += '<p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"><span style="font-family: &#39;Helvetica&#39;; font-size: 14pt; font-variant: normal; vertical-align: baseline;"><strong>';
-                      addition += datas[i];
-                      addition += '</strong></span></p></div>';
-                    }
-                  }
-
-                  document.getElementById("deaconlist").innerHTML = addition;
-                }
-              </script>
 
               <section id="h.28d62b2957bfb16e_36" class="yaqOZd" style="">
                 <div class="IFuOkc"></div>
@@ -916,6 +855,68 @@
   
   <script nonce="LWmRM+wXXbqaGd2FyMwVhg">DOCS_timing['cov'] = new Date().getTime();</script>
   <script src="Javascript/frontend.js"></script>
+  <script>
+    function LoadAboutPara(data){
+      data = prepContent(data);
+
+      var heading = "";
+      var paragraph = "";
+
+      var datas = data.split(/\r?\n/);
+      heading = datas[1];
+      for (let i = 0; i < datas.length; i++) {
+        paragraph += '<p dir="ltr" class="CDt4Ke zfr3Q" style="text-align: left;"><span style="font-size: 14pt; vertical-align: baseline;">';
+        paragraph += datas[i];
+        paragraph += '</span></p>';
+      }
+
+      document.getElementById("aboutparagraph").innerHTML = paragraph;
+    }
+
+    function LoadPastoralTeam(data){
+      data = prepContent(data);
+      
+      var addition = "";
+
+      var datas = data.split(/\r?\n/);
+      for (let i = 0; i < datas.length; i++) {
+        if(i % 2 == 0){
+          addition += '<div class="tyJCtd mGzaTb baZpAe"><p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"><span style="font-size: 14pt; font-variant: normal; vertical-align: baseline;">';
+          addition += datas[i];
+          addition += '</span></p>';
+        }
+        else{
+          addition += '<p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"><span style="font-family: &#39;Helvetica&#39;; font-size: 14pt; font-variant: normal; vertical-align: baseline;"><strong>';
+          addition += datas[i];
+          addition += '</strong></span></p></div>';
+        }
+      }
+
+      document.getElementById("pastoralteamlist").innerHTML = addition + "";
+    }
+
+    function LoadDeaconList(data){
+      data = prepContent(data);
+
+      var addition = "";
+
+      var datas = data.split(/\r?\n/);
+      for (let i = 0; i < datas.length; i++) {
+        if(i % 2 == 0){
+          addition += '<div class="tyJCtd mGzaTb baZpAe"><p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"><span style="font-size: 14pt; font-variant: normal; vertical-align: baseline;">';
+          addition += datas[i];
+          addition += '</span></p>';
+        }
+        else{
+          addition += '<p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"><span style="font-family: &#39;Helvetica&#39;; font-size: 14pt; font-variant: normal; vertical-align: baseline;"><strong>';
+          addition += datas[i];
+          addition += '</strong></span></p></div>';
+        }
+      }
+
+      document.getElementById("deaconlist").innerHTML = addition;
+    }
+  </script>
 </body>
 
 </html>

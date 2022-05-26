@@ -232,26 +232,7 @@
                                     <div class="WIdY2d M1aSXe">
                                       <div jsname="WXxXjd" style="padding-top: 62.0437956204%"></div>
                                       <div class="YMEQtf">
-                                        <div style="height:100%;" jscontroller="nToyvd" data-code="&lt;iframe class=&quot;latestVideoEmbed&quot; vnum=&#39;0&#39; cid=&quot;UCMKaNzK1FpuLunon71O693w&quot; width=&quot;100%&quot; height=&quot;100%&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-var reqURL = &quot;https://api.rss2json.com/v1/api.json?rss_url=&quot; + encodeURIComponent(&quot;https://www.youtube.com/feeds/videos.xml?channel_id=&quot;);
-function loadVideo(iframe) {
-  $.getJSON(reqURL + iframe.getAttribute(&#39;cid&#39;),
-    function(data) {
-      var videoNumber = (iframe.getAttribute(&#39;vnum&#39;) ? Number(iframe.getAttribute(&#39;vnum&#39;)) : 0);
-      console.log(videoNumber);
-      var link = data.items[videoNumber].link;
-      id = link.substr(link.indexOf(&quot;=&quot;) + 1);
-      iframe.setAttribute(&quot;src&quot;, &quot;https://youtube.com/embed/&quot; + id + &quot;?controls=0&amp;autoplay=1&quot;);
-    }
-  );
-}
-var iframes = document.getElementsByClassName(&#39;latestVideoEmbed&#39;);
-for (var i = 0, len = iframes.length; i &lt; len; i++) {
-  loadVideo(iframes[i]);
-}
-&lt;/script&gt;" jsaction="rcuQ6b:rcuQ6b;"><iframe class="pxjVId"></iframe></div>
+                                        <iframe class="latestVideoEmbed" vnum='0' cid="UCMKaNzK1FpuLunon71O693w" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
                                       </div>
                                     </div>
                                   </div>
@@ -489,31 +470,9 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
                               <div class="jXK9ad-SmKAyb">
 
                                 <object data="Home/schedule.txt" onload="
-                                LoadTextSched(this.contentWindow.document.body.innerHTML.substring(59).slice(0, -6));
+                                LoadTextSched(this);
                                 this.remove();
                                 "></object>
-
-                                <script>
-                                  function LoadTextSched(data){
-                                    var addition = "";
-
-                                    var datas = data.split(/\r?\n/);
-                                    for (let i = 0; i < datas.length; i++) {
-                                      if(i % 2 == 1){
-                                        addition += '<p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"> <span style="font-variant: normal;">';
-                                        addition += datas[i];
-                                        addition += '</span></p> <br>';
-                                      }
-                                      else{
-                                        addition += '<p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"> <span style="font-family: &#39;Helvetica&#39;; font-variant: normal;"><strong>';
-                                        addition += datas[i];
-                                        addition += '</strong></span></p>';
-                                      }
-                                    }
-
-                                    document.getElementById("schedule").innerHTML += addition;
-                                  }
-                                </script>
 
                                 <div id="schedule" class="tyJCtd mGzaTb baZpAe">
                                   <div id="h.ra5cu7joqd4c" class="CobnVe aP9Z7e"></div>
@@ -597,8 +556,7 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
                                   scrolling="yes"
                                   style="border:none; overflow:hidden; width:100%; height:100%; background: white; float:left; "
                                   allowtransparency="true"
-                                  frameborder="0"
-                                  >
+                                  frameborder="0">
                                   </iframe>
                                 </div>
                               </div>
@@ -659,8 +617,32 @@ for (var i = 0, len = iframes.length; i &lt; len; i++) {
       role="region" class="IWfHH"></div>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script nonce="glwoBbcIOB2z1PDZiCaSbA">DOCS_timing['cov'] = new Date().getTime();</script>
   <script src="Javascript/frontend.js"></script>
+  <script>
+    function LoadTextSched(data){
+      data = prepContent(data);
+      var addition = "";
+
+      var datas = data.split(/\r?\n/);
+      for (let i = 0; i < datas.length; i++) {
+        if(i % 2 == 1){
+          addition += '<p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"> <span style="font-variant: normal;">';
+          addition += datas[i];
+          addition += '</span></p> <br>';
+        }
+        else{
+          addition += '<p dir="ltr" class="CDt4Ke zfr3Q" style="background-color: transparent; border-bottom: none; border-left: none; border-right: none; border-top: none; line-height: 1.44; margin-bottom: 0; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0;"> <span style="font-family: &#39;Helvetica&#39;; font-variant: normal;"><strong>';
+          addition += datas[i];
+          addition += '</strong></span></p>';
+        }
+      }
+
+      document.getElementById("schedule").innerHTML += addition;
+    }
+  </script>
+
 </body>
 
 </html>
