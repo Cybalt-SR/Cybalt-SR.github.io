@@ -1,5 +1,25 @@
 
 
+function OnBodyScroll() {
+    
+    var windowheight = $(window).height();
+    var tags = $(".tag");
+    
+    for (var i = 0; i < tags.length; i++) {
+        var tag = tags[i];
+        var postop = $(tag).offset().top;
+        var height = $(tag).height();
+
+        if (postop < windowheight && postop + height > 0) {
+            $(tag).addClass("visible");
+        } else {
+            $(tag).removeClass("visible");
+        }
+    }
+
+    console.log($(tags[0]).offset().top + ' : ' + windowheight);
+};
+
 var navbarOpen = false;
 
 window.addEventListener('click', function (e) {
