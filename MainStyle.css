@@ -15,6 +15,10 @@ summary {
 	z-index: 999;
 }
 
+nav{
+	opacity:0.99;
+}
+
 audio,
 canvas,
 video {
@@ -54,6 +58,10 @@ body {
 [role=main]>section,
 footer {
 	transform: translateZ(0);
+}
+
+[role=main]>section:not(.parallaxdivider) {
+	opacity:0.99;
 }
 
 a:focus {
@@ -40109,7 +40117,7 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	transform: translateY(0) translateZ(-1px) scale(2);
+	transform: translateY(0) translateZ(-0.5px) scale(2);
 	background-size: cover;
 	z-index: -1 !important;
 
@@ -40122,12 +40130,12 @@ div.ndfHFb-w37qKe-Sx9Kwc-xJ5Hnf {
 	height: 100vh;
 
 	background-position: bottom;
-	transform: translateY(0px) translateZ(-2px) scale(2.1) !important;
+	transform: translateY(0px) translateZ(-1px) scale(2.1) !important;
 }
 
 .lower.parallaxdivider::before {
 	height: 150%;
-	transform: translateY(50px) translateZ(-1px) scale(2) !important;
+	transform: translateY(0px) translateZ(-1px) scale(2) !important;
 }
 
 .tag {
