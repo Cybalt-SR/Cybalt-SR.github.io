@@ -15,7 +15,7 @@ summary {
 	z-index: 999;
 }
 
-nav{
+header{
 	opacity:0.99;
 }
 
@@ -60,7 +60,7 @@ footer {
 	transform: translateZ(0);
 }
 
-[role=main]>section:not(.parallaxdivider) {
+[role=main]>:not(.parallaxdivider) {
 	opacity:0.99;
 }
 

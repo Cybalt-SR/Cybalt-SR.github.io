@@ -282,7 +282,7 @@
                       <div class="JNdkSc-SmKAyb" id="equippingcontent">
 
                         <object data="Growth Groups/equippingcontent.txt" onload="
-                        Loadministrycontent(this, 'Equipping & Enabling Ministry', 'equippingcontent');
+                        Loadministrycontent(this, 'Equipping and Enlisting Ministry', 'equippingcontent');
                         this.remove();
                         "></object>
 
@@ -523,12 +523,14 @@
         }
         else if (line[0] == '{') {
           line = line.substring(1, line.length - 1);
-
+       
           addition += '<h2 class="';
 
           if (insidecollasible) {
             addition += 'collapsible ';
           }
+
+          var buttonid = id + 'button' + i;
 
           addition += 'Kzv0Me '
                       + 'jXK9ad-SmKAyb '
@@ -539,11 +541,22 @@
           if (insidecollasible) {
           addition += 'onclick="';
           addition += "var content = this.nextElementSibling; if (content.style.maxHeight){content.style.maxHeight = null;} else {content.style.maxHeight = content.scrollHeight + 'px';}";
-          addition += 'console.log(123)';
+          addition += 'console.log(123); ';
+          addition += 'toggledropdown(\'\', \'' + buttonid + '\');';
           addition += '"';
           }
 
           addition += '>';
+
+          addition += '<svg id="' + buttonid + '" class="dvmRw" viewBox="0 0 24 24" stroke="currentColor" jsname="HIH2V" focusable="false">'
+                      +    '<g transform="translate(9.7,12) rotate(45)">'
+                      +        '<path class="K4B8Y" d="M-4.2 0 L4.2 0" stroke-width="2"></path>'
+                      +    '</g>'
+                      +    '<g transform="translate(14.3,12) rotate(-45)">'
+                      +        '<path class="MrYMx" d="M-4.2 0 L4.2 0" stroke-width="2"></path>'
+                      +    '</g>'
+                      + '</svg>';
+
           addition += line;
           addition += '</h2>';
 

@@ -52,12 +52,12 @@ function toggledropdown(idmain, idbutton) {
     var main = document.getElementById(idmain);
     var button = document.getElementById(idbutton);
 
-    if (main.classList.contains("FWGjId") == false) {
-        main.classList.add('FWGjId');
-        button.classList.remove('FWGjId');
-    } else {
-        main.classList.remove('FWGjId');
+    if (button.classList.contains("FWGjId") == false) {
+        if(main)main.classList.remove('FWGjId');
         button.classList.add('FWGjId');
+    } else {
+        if(main)main.classList.add('FWGjId');
+        button.classList.remove('FWGjId');
     }
 }
 
