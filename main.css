@@ -2094,8 +2094,13 @@ footer a:hover {
 }
 
 /* embeds */
-.latestVideoEmbed {
+.latestVideoEmbed, .latestVideoThumbnail {
     aspect-ratio: 16/9;
+}
+
+.latestVideoThumbnail{
+    background-size: cover;
+    background-position: center;
 }
 
 /* Collapsible Styles */

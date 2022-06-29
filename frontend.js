@@ -56,10 +56,11 @@ function prepContent(data) {
   return data.contentWindow.document.body.innerHTML.substring(59).slice(0, -6);
 }
 
-//Youtube Embed Insertion
+//Youtube Embed and thumbnail Insertion
+var cid = 'UCMKaNzK1FpuLunon71O693w';
 var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
 function loadVideo(iframe) {
-  $.getJSON(reqURL + iframe.getAttribute('cid'),
+  $.getJSON(reqURL + cid,
     function (data) {
       var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
       console.log(videoNumber);
@@ -69,9 +70,24 @@ function loadVideo(iframe) {
     }
   );
 }
+function loadThumbnail(element) {
+  $.getJSON(reqURL + cid,
+    function (data) {
+      var videoNumber = (element.getAttribute('vnum') ? Number(element.getAttribute('vnum')) : 0);
+      console.log(videoNumber);
+      var link = data.items[videoNumber].link;
+      id = link.substr(link.indexOf("=") + 1);
+      element.style.backgroundImage = 'url("' + "http://img.youtube.com/vi/" + id + "/sddefault.jpg" + '")';
+    }
+  );
+}
 var iframes = document.getElementsByClassName('latestVideoEmbed');
 for (var i = 0, len = iframes.length; i < len; i++) {
   loadVideo(iframes[i]);
+}
+var elements = document.getElementsByClassName('latestVideoThumbnail');
+for (var i = 0, len = elements.length; i < len; i++) {
+  loadThumbnail(elements[i]);
 }
 
 //footer insertion
