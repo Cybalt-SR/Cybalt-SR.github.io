@@ -2,39 +2,32 @@ Edifying Ministry
 [Managing Elder]Arnel Caringal
 [Managing Deacon]Emelio Jay Diaz Jr.
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
-\
-{Women Of Worth (Women's)}
+\Women Of Worth (Women's)
 [Leader]Lady Christian Diaz
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
 /
-\
-{Men After God's Own Heart (Men's)}
+\Men After God's Own Heart (Men's)
 [Leader]Bemin Abibuag
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
 /
-\
-{LavLife (Couples)}
+\LavLife (Couples)
 [Leader]Arnel Caringal
 [Leader]Arnel Caringal
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
 /
-\
-{Flux (Young Adults)}
+\Flux (Young Adults)
 [Leader]Art Rayo
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
 /
-\
-{Growth Group}
+\Growth Group
 [Leader]Ely Dioneda
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
 /
-\
-{Powerhouse (Prayer)}
+\Powerhouse (Prayer)
 [Leader]Emelio Jay Diaz Jr.
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
 /
-\
-{NxtGen (Youth)}
+\NxtGen (Youth)
 [Leader]Cherry Ann Durante
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
 /

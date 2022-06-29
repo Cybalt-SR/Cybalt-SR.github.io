@@ -1,0 +1,15 @@
+TITLE HERE
+- Title of content should be put at the top line (very first line of file just like the above).
+- Paragraphs can be put anywhere.
+- If you want to put a person with their position/role as a subtext, follow the format below:
+
+[Title]Name of Person
+
+- This will put the text inside the "[]" as a special text below the name of the person.
+- If you want to make a collapsible section with a specific ministry, follow the format below:
+
+\TITLE OF SECTION
+CONTENT
+/
+
+- DO NOT forget the "/" at the end or else the website will put everything inside the collapsible section.

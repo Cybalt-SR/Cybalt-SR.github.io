@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GCF Sta. Rosa | About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="SiteIcon.jpg">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="w3-white">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
+        nonce="6ofsQoWZ"></script>
+
+    <div id="nav"></div>
+
+    <!-- Page Content -->
+    <div class="" id="main">
+
+        <!-- Header/Home -->
+        <header class="w3-container w3-padding-32 w3-center w3-black halfheader" id="home"
+            style="background-image: url('Home/homebannerimage.jpg');">
+            <span>
+                <h1 class="dynamicvisibility simplefade"><strong> Contact Us </strong></h1>
+            </span>
+        </header>
+
+        <!-- Summary Section -->
+        <div class="w3-content w3-justify w3-padding-large">
+            <h2 class="dynamicvisibility simplefade"><strong>Worship through Giving</strong></h2>
+            Worship the Lord through giving and supporting GCF’s efforts to reach the world for Christ. We accept
+            donations through the following channels:
+        </div>
+        <hr style="width:40%;">
+        <div class="w3-justify">
+            <div id="givechannels">
+
+            </div>
+        </div>
+        <div class="w3-light-grey">
+            <div class="w3-content w3-justify w3-padding-large">
+                <a href="contact.html"><button class="hollow dynamicvisibility simplefade"
+                        style="min-width: 100%;">Contact
+                        Us</button></a>
+            </div>
+        </div>
+        <hr style="width:40%;">
+        <div class="w3-content w3-justify w3-padding-large" id="givemessage">
+
+        </div>
+
+
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+        <!-- END PAGE CONTENT -->
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="frontend.js"></script>
+
+<object data="footer.html" onload="LoadFooter(this);this.remove();"></object>
+<object data="nav.html" onload="LoadNav(this);this.remove();"></object>
+
+<object data="Gracious Giving/givechannels.txt" onload="Loadgivechannels(this);this.remove();"></object>
+<object data="Gracious Giving/givemessage.txt" onload="Loadgivemessage(this);this.remove();"></object>
+<script>
+    function Loadgivemessage(data) {
+        data = prepContent(data);
+        var paragraph = "";
+
+        var datas = data.split(/\r?\n/);
+        for (let i = 0; i < datas.length; i++) {
+            paragraph += '<p>';
+            paragraph += datas[i];
+            paragraph += '</p>';
+        }
+
+        document.getElementById("givemessage").innerHTML = paragraph;
+    }
+
+    function Loadgivechannels(data) {
+        data = prepContent(data);
+
+        var containerclassstring = 'class="w3-content w3-row w3-padding-large w3-padding-64"';
+
+        var addition = '<div ' + containerclassstring + '><div class="w3-half">';
+        var hasSplitCol = false;
+        var hasSplitRow = false;
+
+        var datas = data.split(/\r?\n/);
+        var midpoint = (datas.length - 1) / 2
+        for (let i = 0; i < datas.length; i++) {
+            var data = datas[i];
+            if (data[0] == "[") {
+                if (i > midpoint && hasSplitRow == false) {
+                    //middle divider
+                    addition += '</div></div><div class="w3-light-grey"><div ' + containerclassstring + '><div class="w3-half">';
+                    hasSplitCol = false;
+                    hasSplitRow = true;
+                }
+                else if (i % midpoint > (datas.length - 1) / 4 && hasSplitCol == false) {
+                    //column divider
+                    addition += '</div><div class="w3-half">';
+                    hasSplitCol = true;
+                }
+                else if (i > 0) addition += '<br>';
+
+                addition += '<strong>';
+                addition += data.substring(1, data.length - 1);
+                addition += '</strong><br>';
+            }
+            else {
+                addition += data + '<br>';
+            }
+        }
+
+        addition += '</div></div></div>';
+        document.getElementById("givechannels").innerHTML = addition + "";
+    }
+</script>
+
+</html>

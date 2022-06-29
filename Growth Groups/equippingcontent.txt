@@ -2,18 +2,15 @@ Equipping and Enlisting Ministry
 [Managing Elder]James Paet
 [Managing Deacon]Alvin Tan
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
-\
-{Children's Dept Training}
+\Children's Dept Training
 [Leader]Gina Pega
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
 /
-\
-{Enlisting}
+\Enlisting
 [Leader]Edan Ronquillo
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
 /
-\
-{Adult Dept Training}
+\Adult Dept Training
 [Leader]Jovie Colcol
 Experience God’s love on a personal level when you join a Growth Group as you develop meaningful relationships in a community of believers. Deepen your roots in God’s word as you study the Bible with brothers and sisters in Christ who will walk alongside you and help you grow in love and maturity in the Lord.
 /
