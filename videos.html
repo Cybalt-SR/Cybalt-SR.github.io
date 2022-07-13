@@ -36,37 +36,64 @@
             <hr style="width:90%;">
             <h3 class="dynamicvisibility simplefade">More Videos</h3>
             <div class="w3-row">
-                <div class="w3-third narrow">
-                    <div class="latestVideoThumbnail" vnum='1' width="100%" frameborder="0" allowfullscreen
-                        onclick="ReplaceVideo(this)">
+                <div class="w3-third absolute">
+                    <div class="w3-padding-grid">
+                        <div class="latestVideoThumbnail" vnum='1' width="100%" frameborder="0" allowfullscreen
+                            onclick="ReplaceVideo(this)">
+                            <div class="w3-small"><span></span></div>
+                        </div>
                     </div>
-                    <div class="latestVideoThumbnail" vnum='4' width="100%" frameborder="0" allowfullscreen
-                        onclick="ReplaceVideo(this)">
+                    <div class="w3-padding-grid">
+                        <div class="latestVideoThumbnail" vnum='4' width="100%" frameborder="0" allowfullscreen
+                            onclick="ReplaceVideo(this)">
+                            <div class="w3-small"><span></span></div>
+                        </div>
                     </div>
-                    <div class="latestVideoThumbnail" vnum='7' width="100%" frameborder="0" allowfullscreen
-                        onclick="ReplaceVideo(this)">
-                    </div>
-                </div>
-                <div class="w3-third narrow">
-                    <div class="latestVideoThumbnail" vnum='2' width="100%" frameborder="0" allowfullscreen
-                        onclick="ReplaceVideo(this)">
-                    </div>
-                    <div class="latestVideoThumbnail" vnum='5' width="100%" frameborder="0" allowfullscreen
-                        onclick="ReplaceVideo(this)">
-                    </div>
-                    <div class="latestVideoThumbnail" vnum='8' width="100%" frameborder="0" allowfullscreen
-                        onclick="ReplaceVideo(this)">
+                    <div class="w3-padding-grid">
+                        <div class="latestVideoThumbnail" vnum='7' width="100%" frameborder="0" allowfullscreen
+                            onclick="ReplaceVideo(this)">
+                            <div class="w3-small"><span></span></div>
+                        </div>
                     </div>
                 </div>
-                <div class="w3-third narrow">
-                    <div class="latestVideoThumbnail" vnum='3' width="100%" frameborder="0" allowfullscreen
-                        onclick="ReplaceVideo(this)">
+                <div class="w3-third absolute">
+                    <div class="w3-padding-grid">
+                        <div class="latestVideoThumbnail" vnum='2' width="100%" frameborder="0" allowfullscreen
+                            onclick="ReplaceVideo(this)">
+                            <div class="w3-small"><span></span></div>
+                        </div>
                     </div>
-                    <div class="latestVideoThumbnail" vnum='6' width="100%" frameborder="0" allowfullscreen
-                        onclick="ReplaceVideo(this)">
+                    <div class="w3-padding-grid">
+                        <div class="latestVideoThumbnail" vnum='5' width="100%" frameborder="0" allowfullscreen
+                            onclick="ReplaceVideo(this)">
+                            <div class="w3-small"><span></span></div>
+                        </div>
                     </div>
-                    <div class="latestVideoThumbnail" vnum='9' width="100%" frameborder="0" allowfullscreen
-                        onclick="ReplaceVideo(this)">
+                    <div class="w3-padding-grid">
+                        <div class="latestVideoThumbnail" vnum='8' width="100%" frameborder="0" allowfullscreen
+                            onclick="ReplaceVideo(this)">
+                            <div class="w3-small"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-third absolute">
+                    <div class="w3-padding-grid">
+                        <div class="latestVideoThumbnail" vnum='3' width="100%" frameborder="0" allowfullscreen
+                            onclick="ReplaceVideo(this)">
+                            <div class="w3-small"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="w3-padding-grid">
+                        <div class="latestVideoThumbnail" vnum='6' width="100%" frameborder="0" allowfullscreen
+                            onclick="ReplaceVideo(this)">
+                            <div class="w3-small"><span></span></div>
+                        </div>
+                    </div>
+                    <div class="w3-padding-grid">
+                        <div class="latestVideoThumbnail" vnum='9' width="100%" frameborder="0" allowfullscreen
+                            onclick="ReplaceVideo(this)">
+                            <div class="w3-small"><span></span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,7 +119,7 @@
 <script>
     function ReplaceVideo(triggerer) {
         var vnum = triggerer.getAttribute('vnum');
-        
+
         var maindisplay = document.getElementById('maindisplay')
         maindisplay.setAttribute("vnum", vnum);
         loadVideo(maindisplay);

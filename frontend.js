@@ -1,4 +1,3 @@
-
 //Collapsible Objects Setup
 SetupButtons();
 
@@ -78,6 +77,10 @@ function loadThumbnail(element) {
       var link = data.items[videoNumber].link;
       id = link.substr(link.indexOf("=") + 1);
       element.style.backgroundImage = 'url("' + "http://img.youtube.com/vi/" + id + "/sddefault.jpg" + '")';
+
+      GetTitle(id, function (title) {
+        element.querySelector("span").innerHTML = title;
+      });
     }
   );
 }
@@ -88,6 +91,23 @@ for (var i = 0, len = iframes.length; i < len; i++) {
 var elements = document.getElementsByClassName('latestVideoThumbnail');
 for (var i = 0, len = elements.length; i < len; i++) {
   loadThumbnail(elements[i]);
+}
+
+// Youtube API getters
+var yt_api_key = 'AIzaSyBT54ZwWyTt-U23kAEBKYptpKjIoAIhZYs';
+
+function GetTitle(yt_video_id, func) {
+  var yt_snippet_endpoint = "https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + yt_video_id + "&key=" + yt_api_key;
+
+  var jqxhr = $.getJSON(yt_snippet_endpoint)
+    .done(function (data) {
+      var title = data.items[0].snippet.title + "";
+      func(title);
+      return;
+    })
+    .fail(function () {
+      return "null title";
+    });
 }
 
 //footer insertion

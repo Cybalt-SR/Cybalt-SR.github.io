@@ -1458,6 +1458,11 @@ a {
     padding: 12px 24px !important
 }
 
+/* Custom padding setup */
+.w3-padding-grid{
+    padding: 4px !important
+}
+
 .w3-padding-16 {
     padding-top: 16px !important;
     padding-bottom: 16px !important
@@ -2103,6 +2108,44 @@ footer a:hover {
     background-position: center;
 }
 
+.latestVideoThumbnail {
+    position: relative;
+    transition: 0.3s;
+}
+
+.latestVideoThumbnail>div {
+    position: absolute;
+    margin: 10px;
+    text-align: left !important;
+    color:white;
+    
+    transform: translateY(0);
+    transition: transform 0.3s;
+}
+
+.latestVideoThumbnail:hover>div {
+    transform: translateY(5px);
+}
+
+.latestVideoThumbnail::before {
+    background: linear-gradient(180deg, rgba(0,0,0, 0.7) 0%, #00000000 60%);
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    opacity: 0.7;
+
+    transition: opacity 0.3s;
+}
+
+.latestVideoThumbnail:hover::before {
+    opacity: 1;
+}
+
 /* Collapsible Styles */
 /* note: class '.active' is the universal toggler class */
 .collapsible {
@@ -2356,4 +2399,16 @@ footer a:hover {
     .w3-half.narrow {
         width: 49.99999%
     }
+}
+
+.w3-quarter.absolute {
+    width: 24.99999%
+}
+
+.w3-third.absolute {
+    width: 33.33333%
+}
+
+.w3-half.absolute {
+    width: 49.99999%
 }
