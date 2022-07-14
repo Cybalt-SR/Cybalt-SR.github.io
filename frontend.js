@@ -94,7 +94,7 @@ for (var i = 0, len = elements.length; i < len; i++) {
 }
 
 // Youtube API getters
-var yt_api_key = 'AIzaSyBT54ZwWyTt-U23kAEBKYptpKjIoAIhZYs';
+var yt_api_key = GetAPIKEY();
 
 function GetTitle(yt_video_id, func) {
   var yt_snippet_endpoint = "https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + yt_video_id + "&key=" + yt_api_key;
