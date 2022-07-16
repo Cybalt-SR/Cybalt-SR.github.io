@@ -2099,21 +2099,21 @@ footer a:hover {
 }
 
 /* embeds */
-.latestVideoEmbed, .latestVideoThumbnail {
+.feedVideoEmbed, .videoThumbnail {
     aspect-ratio: 16/9;
 }
 
-.latestVideoThumbnail{
+.videoThumbnail{
     background-size: cover;
     background-position: center;
 }
 
-.latestVideoThumbnail {
+.videoThumbnail {
     position: relative;
     transition: 0.3s;
 }
 
-.latestVideoThumbnail>div {
+.videoThumbnail>div {
     position: absolute;
     margin: 10px;
     text-align: left !important;
@@ -2123,11 +2123,11 @@ footer a:hover {
     transition: transform 0.3s;
 }
 
-.latestVideoThumbnail:hover>div {
+.videoThumbnail:hover>div {
     transform: translateY(5px);
 }
 
-.latestVideoThumbnail::before {
+.videoThumbnail::before {
     background: linear-gradient(180deg, rgba(0,0,0, 0.7) 0%, #00000000 60%);
     content: " ";
     display: block;
@@ -2142,7 +2142,7 @@ footer a:hover {
     transition: opacity 0.3s;
 }
 
-.latestVideoThumbnail:hover::before {
+.videoThumbnail:hover::before {
     opacity: 1;
 }
 
