@@ -1,0 +1,21 @@
+<?
+    $vidID = $_POST['vidID'];
+    $url = "http://gdata.youtube.com/feeds/api/videos/". $vidID;
+    $doc = new DOMDocument;
+    $doc->load($url);
+    $title = $doc->getElementsByTagName("title")->item(0)->nodeValue;
+?>
+
+<html>
+    <head>
+        <title>Get Video Name</title>
+    </head>
+    <body>
+        <form action="test.php" method="post">
+            <input type="text" value="ID Here" name="vidID" />
+            <input type="submit" value="Get Name" />
+        </form>
+        <div id="page">URL: [<?= $url ?>]</div>
+        <div id="title">Title: [<?= $title ?>]</div>
+    </body>
+</html>
