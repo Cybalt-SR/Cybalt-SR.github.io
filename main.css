@@ -341,7 +341,7 @@ h6 {
     margin: 10px 0
 }
 
-button h4{
+button h4 {
     margin: 0;
 }
 
@@ -1459,7 +1459,7 @@ a {
 }
 
 /* Custom padding setup */
-.w3-padding-grid{
+.w3-padding-grid {
     padding: 4px !important
 }
 
@@ -2014,22 +2014,12 @@ a {
 /* START OF CUSTOM CLASSES */
 
 /* Sections and headings */
+
 .header {
-    height: 100vh;
-
-    background-size: cover;
-    background-position: bottom;
-
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: flex;
-
-    transform-style: preserve-3d;
-    transform: translateZ(-1);
+    height: 70vh;
 }
 
-.halfheader{
+.halfheader {
     height: 50vh;
 
     background-size: cover;
@@ -2099,11 +2089,20 @@ footer a:hover {
 }
 
 /* embeds */
-.feedVideoEmbed, .videoThumbnail {
+.feedVideoEmbed,
+.videoThumbnail {
     aspect-ratio: 16/9;
 }
 
-.videoThumbnail{
+.videoThumbnail span {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.videoThumbnail {
     background-size: cover;
     background-position: center;
 }
@@ -2117,8 +2116,8 @@ footer a:hover {
     position: absolute;
     margin: 10px;
     text-align: left !important;
-    color:white;
-    
+    color: white;
+
     transform: translateY(0);
     transition: transform 0.3s;
 }
@@ -2128,7 +2127,7 @@ footer a:hover {
 }
 
 .videoThumbnail::before {
-    background: linear-gradient(180deg, rgba(0,0,0, 0.7) 0%, #00000000 60%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, #00000000 60%);
     content: " ";
     display: block;
     position: absolute;
@@ -2175,7 +2174,7 @@ footer a:hover {
     transition: max-height 0.2s ease-out;
 }
 
-.content p{
+.content p {
     margin-top: 0;
 }
 
