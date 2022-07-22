@@ -2032,6 +2032,7 @@ a {
 }
 
 .headbuffer {
+    position: relative;
     height: 100vh;
 
     justify-content: center;
@@ -2047,10 +2048,11 @@ a {
 
     content: " ";
     display: block;
-    height: 100%;
     aspect-ratio: 1/1;
     pointer-events: none;
     position: absolute;
+    top: 0;
+    bottom: 0;
 }
 
 /* Buttons and links */
