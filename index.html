@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="SiteIcon.jpg">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mainNoSidebar.css">
+    <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -22,30 +24,47 @@
     <div class="" id="main">
 
         <!-- Header/Home -->
-        <header class="w3-container w3-padding-32 w3-center w3-black header" id="home">
+        <div class="w3-content w3-container w3-padding-32 w3-center w3-white" id="home">
+            <div>
+                <img src="logo_complete.png" style="height: 150px;">
+            </div>
+        </div>
+
+        <nav class="w3-bar w3-green w3-center w3-small">
+            <a href="index.html" class="w3-bar-item w3-button" style="width:12.5% !important">HOME</a>
+            <a href="videos.html" class="w3-bar-item w3-button" style="width:12.5% !important">VIDEOS</a>
+            <a href="ministries.html" class="w3-bar-item w3-button" style="width:12.5% !important">MINISTRIES</a>
+            <a href="contact.html" class="w3-bar-item w3-button" style="width:12.5% !important">CONTACT</a>
+            <a href="gracious_giving.html" class="w3-bar-item w3-button" style="width:12.5% !important">GIVE</a>
+            <a href="about.html" class="w3-bar-item w3-button" style="width:12.5% !important">ABOUT</a>
+        </nav>
+
+        <header class="w3-container w3-padding-32 w3-center w3-white header" id="home"
+        style="background-image:url('Home/homebannerimage.jpg'); background-size: cover; background-position: bottom;"
+        >
             <link rel="stylesheet" href="Home/carousel.css">
             <section class="carousel" aria-label="Gallery">
                 <ol class="carousel__viewport">
                     <li id="carousel__slide1" tabindex="0" class="carousel__slide"
-                    style="background-image:url('Home/home_1.jpg');">
+                        style="background-image:url('Home/home_1.jpg');">
                         <div class="carousel__snapper"></div>
                         <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
                         <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
                     </li>
                     <li id="carousel__slide2" tabindex="0" class="carousel__slide"
-                    style="background-image:url('Home/home_2.jpg');">
+                        style="background-image:url('Home/home_2.jpg');">
                         <div class="carousel__snapper"></div>
                         <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
                         <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
                     </li>
                     <li id="carousel__slide3" tabindex="0" class="carousel__slide"
-                    style="background-image:url('Home/home_3.jpg');">
+                        style="background-image:url('Home/home_3.jpg');">
                         <div class="carousel__snapper"></div>
                         <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
                         <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
                     </li>
                     <li id="carousel__slide4" tabindex="0" class="carousel__slide"
-                    style="background-image:url('Home/home_4.jpg');">
+                        style="background-image:url('Home/home_4.jpg');">
                         <div class="carousel__snapper"></div>
                         <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
                         <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
@@ -70,13 +89,7 @@
             </section>
         </header>
 
-        <div class="w3-content w3-container w3-padding-32 w3-center w3-white headbuffer" id="home">
-            <div>
-                <h1 class="dynamicvisibility simplefade"><strong> Know Christ and Make Him Known </strong></h1>
-                <a href="videos.html"><button class="hollow dynamicvisibility simplefade"
-                        style="min-width: 90%;">Worship with us</button></a>
-            </div>
-        </div>
+
 
         <!-- Summary Section -->
         <hr style="width:90%;">

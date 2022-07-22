@@ -84,8 +84,10 @@
 }
 
 .carousel {
-    width: 100%;
-    height:100%;
+    max-height: 100%;
+    aspect-ratio: 2/1;
+
+    margin: auto;
 
     position: relative;
     filter: drop-shadow(0 0 10px #0003);
@@ -109,7 +111,7 @@
     flex: 0 0 100%;
     width: 100%;
 
-    background-size:cover;
+    background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -219,9 +221,11 @@
 }
 
 .carousel::before {
+    filter: drop-shadow(0 0 10px #0009);
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
 }
 
 .carousel::after {
+    filter: drop-shadow(0 0 10px #0009);
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
 }
