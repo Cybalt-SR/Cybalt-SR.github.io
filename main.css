@@ -831,7 +831,7 @@ a {
 }
 
 .w3-content {
-    max-width: 940px
+    max-width: calc(100% - 50px)
 }
 
 .w3-auto {

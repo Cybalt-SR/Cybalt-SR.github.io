@@ -1,6 +1,6 @@
 #main {
     margin-left: 0 !important
 }
-.w3-hide-small {
+.w3-hide-small, .w3-hide-medium {
     display: none !important
 }
