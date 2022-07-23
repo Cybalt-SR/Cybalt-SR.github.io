@@ -167,7 +167,29 @@ function InitPlaylistVideos(data) {
 
 function LoadFooter(obj) {
   document.getElementById("footer").innerHTML = obj.contentWindow.document.body.innerHTML;
+  
+  setTimeout(LoadFooterInfoInserter, 100);
 }
+
+function LoadFooterInfoInserter(){
+  var infoinserter = '<object data="footerinfo.txt" onload="LoadFooterInfo(this);this.remove();"></object>';
+  document.getElementById("footer").innerHTML += infoinserter;
+}
+
+function LoadFooterInfo(obj) {
+  data = prepContent(obj);
+
+  var addition = '';
+
+  var datas = data.split(/\r?\n/);
+  for (let i = 0; i < datas.length; i++) {
+    var data = datas[i]; {
+      addition += '<p>' + data + '</p>';
+    }
+  }
+  document.getElementById("footerinfo").innerHTML = addition + "";
+}
+
 function LoadNav(obj) {
   document.getElementById("nav").innerHTML = obj.contentWindow.document.body.innerHTML;
 }

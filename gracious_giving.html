@@ -42,7 +42,7 @@
 
             </div>
         </div>
-        <div class="w3-light-grey">
+        <div class="w3-white">
             <div class="w3-content w3-justify w3-padding-large">
                 <a href="contact.html"><button class="hollow dynamicvisibility simplefade"
                         style="min-width: 100%;">Contact
@@ -89,9 +89,9 @@
     function Loadgivechannels(data) {
         data = prepContent(data);
 
-        var containerclassstring = 'class="w3-content w3-row w3-padding-large w3-padding-64"';
+        var containerclassstring = 'class="w3-content w3-row w3-padding-large w3-padding-32"';
 
-        var addition = '<div ' + containerclassstring + '><div class="w3-half">';
+        var addition = '<div ' + containerclassstring + '><div class="w3-half w3-padding-small">';
         var hasSplitCol = false;
         var hasSplitRow = false;
 
@@ -102,16 +102,16 @@
             if (data[0] == "[") {
                 if (i > midpoint && hasSplitRow == false) {
                     //middle divider
-                    addition += '</div></div><div class="w3-light-grey"><div ' + containerclassstring + '><div class="w3-half">';
+                    addition += '</div></div><div class="w3-white"><div ' + containerclassstring + '><div class="w3-half w3-padding-small">';
                     hasSplitCol = false;
                     hasSplitRow = true;
                 }
                 else if (i % midpoint > (datas.length - 1) / 4 && hasSplitCol == false) {
                     //column divider
-                    addition += '</div><div class="w3-half">';
+                    addition += '</div><div class="w3-half w3-padding-small">';
                     hasSplitCol = true;
                 }
-                else if (i > 0) addition += '<br>';
+                else if (i > 0) addition += '<p></p>';
 
                 addition += '<strong>';
                 addition += data.substring(1, data.length - 1);

@@ -84,7 +84,7 @@ footer a {
 }
 
 footer a:hover {
-    color: white;
+    color: black;
 }
 
 /* embeds */
@@ -274,17 +274,18 @@ footer a:hover {
 
 .buttongradient>div {
     background-position: bottom;
-    padding: 10px 20px 20px 20px;
-
-    border-radius: 20px;
-    position: relative;
-
     background-size: cover;
+
+    position: relative;
+    padding: 10px 20px 20px 20px;
+    border-radius: 20px;
+
+    transform: translateY(0);
     transition: 0.3s;
 }
 
 .buttongradient:hover>div {
-    background-size: calc(cover);
+    transform: translateY(-15px)
 }
 
 .buttongradient>div>div {
