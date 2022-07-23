@@ -1,3 +1,19 @@
+// update FB Embed
+updatefbembed();
+window.addEventListener("resize", updatefbembed);
+
+function updatefbembed() {
+  var embed = document.getElementById('fbembed');
+
+  if (embed != null) {
+    var newsrc = 'https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F306639766125525&width=';
+    newsrc += embed.offsetWidth + '';
+    newsrc += '&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=';
+    newsrc += embed.offsetHeight + '';
+    embed.src = newsrc;
+  }
+}
+
 //Collapsible Objects Setup
 SetupButtons();
 

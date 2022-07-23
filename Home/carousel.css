@@ -84,7 +84,7 @@
 }
 
 .carousel {
-    max-width: 100%;
+    width: 100%;
     aspect-ratio: 2/1;
 
     margin: auto;
@@ -111,7 +111,7 @@
     flex: 0 0 100%;
     width: 100%;
 
-    background-size:contain;
+    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -129,7 +129,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     height: 100%;
     scroll-snap-align: center;
 }
@@ -197,12 +197,12 @@
 
 .carousel::before,
 .carousel__prev {
-    left: -1rem;
+    left: 1rem;
 }
 
 .carousel::after,
 .carousel__next {
-    right: -1rem;
+    right: 1rem;
 }
 
 .carousel::before,

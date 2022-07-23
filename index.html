@@ -30,18 +30,26 @@
             </div>
         </div>
 
-        <nav class="w3-bar w3-black w3-center w3-small">
-            <a href="index.html" class="w3-bar-item w3-button" style="width:12.5% !important">HOME</a>
-            <a href="videos.html" class="w3-bar-item w3-button" style="width:12.5% !important">VIDEOS</a>
-            <a href="ministries.html" class="w3-bar-item w3-button" style="width:12.5% !important">MINISTRIES</a>
-            <a href="contact.html" class="w3-bar-item w3-button" style="width:12.5% !important">CONTACT</a>
-            <a href="gracious_giving.html" class="w3-bar-item w3-button" style="width:12.5% !important">GIVE</a>
-            <a href="about.html" class="w3-bar-item w3-button" style="width:12.5% !important">ABOUT</a>
-        </nav>
+        <div class="custom-homenav custom-centerflex w3-black w3-center w3-small">
+            <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+            <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-bar-item w3-button">CONNECT</button>
+                <div class="w3-dropdown-content w3-bar-block w3-black item-narrow">
+                    <a href="#" class="w3-bar-item w3-button w3-item-narrow">Growth Groups</a>
+                    <a href="#" class="w3-bar-item w3-button w3-item-narrow">Ministries</a>
+                    <a href="#" class="w3-bar-item w3-button w3-item-narrow">Outreach</a>
+                    <a href="#" class="w3-bar-item w3-button w3-item-narrow">Satelite Church</a>
+                </div>
+            </div>
+            <a href="videos.html" class="w3-bar-item w3-button">VIDEOS</a>
+            <a href="gracious_giving.html" class="w3-bar-item w3-button">GIVE</a>
+            <a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
+        </div>
 
         <!--style="background-image:url('Home/homebannerimage.jpg'); background-size: cover; background-position: bottom;" -->
 
-        <header class="w3-container w3-padding-32 w3-center w3-white header" id="home">
+        <header class="w3-center w3-white header custom-centerflex" id="home" style="height:fit-content;">
             <link rel="stylesheet" href="Home/carousel.css">
             <section class="carousel" aria-label="Gallery">
                 <ol class="carousel__viewport">
@@ -94,9 +102,9 @@
         <!-- Summary Section -->
         <hr style="width:90%;">
         <div class="w3-light-grey">
-            <div class="w3-content w3-justify w3-padding-32 w3-padding-large">
+            <div class="w3-content w3-justify w3-padding-16">
                 <h3 class="dynamicvisibility simplefade"><strong>
-                        <center>Schedule</center>
+                        <center>Schedules</center>
                     </strong></h3>
                 <div id="schedule" class="w3-row dynamicvisibility simplefade" style="max-width: 700px; margin: auto;">
                     <div class="w3-half narrow w3-padding-16">
@@ -111,6 +119,15 @@
                             2nd Service
                         </center>
                     </div>
+                </div>
+                <hr style="width:90%;">
+                <h3 class="dynamicvisibility simplefade"><strong>
+                        <center>Location</center>
+                    </strong></h3>
+                <div id="location" class="dynamicvisibility simplefade" style="max-width: 700px; margin: auto;">
+                    <center>
+
+                    </center>
                 </div>
             </div>
         </div>
@@ -192,13 +209,11 @@
                     our facebook feed!</button>
                 <div class="content">
                     <hr style="width:200px" class="w3-opacity">
-                    <div class="w3-row" style="margin: auto; width: fit-content;">
-                        <div class="fb-page" data-href="https://www.facebook.com/gcfsantarosa/" data-tabs="timeline"
-                            data-width="100000" data-height="" data-small-header="true"
-                            data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
-                            <blockquote cite="https://www.facebook.com/gcfsantarosa/" class="fb-xfbml-parse-ignore"><a
-                                    href="https://www.facebook.com/gcfsantarosa/">GCF Santa Rosa Church</a></blockquote>
-                        </div>
+                    <div class="custom-centerflex" style="width: 100%; height: 70vh;">
+                        <iframe src="" id="fbembed" scrolling="yes"
+                            style="border:none; overflow:hidden; width: 100%; max-width: 500px; height:100%; background: white; "
+                            allowtransparency="true" frameborder="0">
+                        </iframe>
                     </div>
                     <hr style="width:200px" class="w3-opacity">
                 </div>
@@ -218,6 +233,7 @@
 
 <object data="Home/homeparagraph.txt" onload="LoadHomeParagraph(this);this.remove();"></object>
 <object data="Home/schedule.txt" onload="LoadSchedule(this);this.remove();"></object>
+<object data="Home/location.txt" onload="LoadLocation(this);this.remove();"></object>
 <object data="footer.html" onload="LoadFooter(this);this.remove();"></object>
 <object data="nav.html" onload="LoadNav(this);this.remove();"></object>
 <script>
@@ -267,7 +283,22 @@
         addition += '</center></div>';
         document.getElementById("schedule").innerHTML = addition + "";
     }
-    //schedule
+    function LoadLocation(obj) {
+        data = prepContent(obj);
+
+        var addition = '<center>';
+
+        var datas = data.split(/\r?\n/);
+        for (let i = 0; i < datas.length; i++) {
+            var data = datas[i]; {
+                addition += data;
+                addition += '<br>';
+            }
+        }
+
+        addition += '</center>';
+        document.getElementById("location").innerHTML = addition + "";
+    }
 </script>
 
 </html>

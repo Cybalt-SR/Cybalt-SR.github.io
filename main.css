@@ -539,14 +539,16 @@ a {
 
 .w3-dropdown-click,
 .w3-dropdown-hover {
-    position: relative;
+    position: relative !important;
     display: inline-block;
     cursor: pointer
 }
 
 .w3-dropdown-hover:hover .w3-dropdown-content {
-    display: block
+    transform: scaleY(1);
 }
+
+
 
 .w3-dropdown-hover:first-child,
 .w3-dropdown-click:hover {
@@ -564,12 +566,17 @@ a {
     cursor: auto;
     color: #000;
     background-color: #fff;
-    display: none;
     position: absolute;
+    top: 100%;
     min-width: 160px;
     margin: 0;
     padding: 0;
-    z-index: 1
+    z-index: 1;
+
+    transform: scaleY(0);
+    transform-origin: top;
+
+    transition: transform 0.2s;
 }
 
 .w3-check,
@@ -586,7 +593,8 @@ a {
     background-color: #fff;
     position: fixed !important;
     z-index: 1;
-    overflow: auto
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .w3-bar-block .w3-dropdown-hover,
@@ -672,6 +680,11 @@ a {
     white-space: normal;
     float: none;
     outline: 0
+}
+
+.w3-bar-block .w3-bar-item.w3-item-narrow{
+    padding: 8px 2px;
+    text-align: left !important;
 }
 
 .w3-bar-block.w3-center .w3-bar-item {
@@ -831,7 +844,7 @@ a {
 }
 
 .w3-content {
-    max-width: calc(100% - 50px)
+    max-width: 1340px;
 }
 
 .w3-auto {

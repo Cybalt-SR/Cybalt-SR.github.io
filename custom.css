@@ -1,6 +1,6 @@
 /* Sections and headings */
 
-nav {
+.custom-centerflex{
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -8,19 +8,8 @@ nav {
     flex-wrap: wrap;
 }
 
-nav a{
+.custom-homenav a{
     min-width: 150px;
-}
-
-.header {
-    height: 100vh;
-    
-
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .header>section {
