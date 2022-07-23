@@ -30,8 +30,16 @@ function SetupButtons() {
       } else {
         content.style.maxHeight = content.scrollHeight + "px";
       }
-
       setTimeout(UpdateDynamicVisObjs, 150);
+    });
+  }
+
+  var toggleables = document.getElementsByClassName("toggleable");
+  var i;
+
+  for (i = 0; i < toggleables.length; i++) {
+    toggleables[i].addEventListener("click", function () {
+      this.classList.toggle("active");
     });
   }
 }
@@ -167,7 +175,7 @@ function InitPlaylistVideos(data) {
 
 function LoadFooter(obj) {
   document.getElementById("footer").innerHTML = obj.contentWindow.document.body.innerHTML;
-  
+
   setTimeout(LoadFooterInfoInserter, 100);
 }
 

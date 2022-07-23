@@ -544,11 +544,9 @@ a {
     cursor: pointer
 }
 
-.w3-dropdown-hover:hover .w3-dropdown-content {
+.w3-dropdown-hover.active .w3-dropdown-content {
     transform: scaleY(1);
 }
-
-
 
 .w3-dropdown-hover:first-child,
 .w3-dropdown-click:hover {
