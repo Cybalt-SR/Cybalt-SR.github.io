@@ -8,7 +8,7 @@ function updatefbembed() {
   if (embed != null) {
     var newsrc = 'https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F306639766125525&width=';
     newsrc += embed.offsetWidth + '';
-    newsrc += '&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=';
+    newsrc += '&colorscheme=light&show_faces=true&border_color&stream=true&small_header=true&hide_cover=true&height=';
     newsrc += embed.offsetHeight + '';
     embed.src = newsrc;
   }
@@ -16,24 +16,20 @@ function updatefbembed() {
 
 //Collapsible Objects Setup
 
-  window.addEventListener('load', function () {
-    SetupButtons();
-  })
+window.addEventListener('load', function () {
+  SetupButtons();
+})
 
 function SetupButtons() {
   console.log("Setting-up Buttons (1)");
   var coll = document.getElementsByClassName("collapsibleButton");
 
   for (var i = 0; i < coll.length; i++) {
+    UpdateCollapsible(coll[i]);
+    
     coll[i].addEventListener("click", function () {
       this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-      setTimeout(UpdateDynamicVisObjs, 150);
+      UpdateCollapsible(this);
     });
   }
   var toggleables = document.getElementsByClassName("toggleable");
@@ -45,6 +41,16 @@ function SetupButtons() {
       this.classList.toggle("active");
     });
   }
+}
+
+function UpdateCollapsible(caller_button) {
+  var content = caller_button.nextElementSibling;
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+  } else if (caller_button.classList.contains('active')) {
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+  setTimeout(UpdateDynamicVisObjs, 150);
 }
 
 //Scroll Visibility

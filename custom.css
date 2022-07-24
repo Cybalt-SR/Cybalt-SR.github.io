@@ -30,26 +30,24 @@
 
 .headbuffer {
     position: relative;
-    height: 100vh;
-
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: flex;
 }
 
-.headbuffer::before {
+.headbuffer::after {
     background-image: url(Logobig.png);
-    opacity: 0.2;
-    background-size: cover;
+    opacity: 0.1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
+    z-index: -1;
     content: " ";
     display: block;
-    aspect-ratio: 1/1;
     pointer-events: none;
     position: absolute;
     top: 0;
     bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 /* Buttons and links */

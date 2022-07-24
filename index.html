@@ -14,14 +14,12 @@
 </head>
 
 <body class="w3-white">
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
-        nonce="6ofsQoWZ"></script>
 
     <div id="nav"></div>
 
     <!-- Page Content -->
     <div class="" id="main">
+
 
         <!-- Header/Home -->
         <div class="w3-content w3-container w3-padding-32 w3-center w3-white" id="home">
@@ -89,7 +87,7 @@
         <div class="w3-light-grey">
             <div class="w3-content w3-justify w3-padding-16">
                 <h3 class="dynamicvisibility simplefade"><strong>
-                        <center>Schedules</center>
+                        <center class="w3-text-green">Schedules</center>
                     </strong></h3>
                 <div id="schedule" class="w3-row dynamicvisibility simplefade" style="max-width: 700px; margin: auto;">
                     <div class="w3-half narrow w3-padding-16">
@@ -107,22 +105,36 @@
                 </div>
                 <hr style="width:90%;">
                 <h3 class="dynamicvisibility simplefade"><strong>
-                        <center>Location</center>
+                        <center class="w3-text-green">Location</center>
                     </strong></h3>
                 <div id="location" class="dynamicvisibility simplefade" style="max-width: 700px; margin: auto;">
                     <center>
 
                     </center>
                 </div>
+
+                <div class="w3-padding-32 w3-padding-large">
+                    <div class="collapsible">
+                        <button class="collapsibleButton w3-center w3-white w3-wide dynamicvisibility simplefade">Show
+                            Map</button>
+                        <div class="content">
+                            <hr style="width:200px" class="w3-opacity">
+                            <div class="custom-centerflex" style="width: 100%; height: 70vh;">
+                                <img alt="map img goes here" src="Home/map_img.jpg">
+                            </div>
+                            <hr style="width:200px" class="w3-opacity">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <hr style="width:90%;">
-        <div class="w3-white">
-            <div class="w3-content w3-justify w3-padding-large">
+        <div class="w3-transparent">
+            <div class="w3-content w3-justify w3-padding-large headbuffer">
 
                 <div class="w3-row w3-padding-16 w3-section">
                     <div class="w3-half w3-section">
-                        <h3 class="dynamicvisibility simplefade">Latest Video</h3>
+                        <h3 class="dynamicvisibility simplefade w3-text-green">Latest Video</h3>
                         <div class="w3-margin-right">
                             <iframe class="feedVideoEmbed" vnum='0' width="100%" height="100%" frameborder="0"
                                 allowfullscreen id="maindisplay"></iframe>
@@ -137,8 +149,19 @@
                         </div>
                     </div>
                     <div class="w3-half w3-section">
-                        <h3 id="hometitle" class="dynamicvisibility simplefade"></h3>
-                        <p id="homeparagraph"></p>
+                        <h3 class="dynamicvisibility simplefade w3-text-green">Facebook Feed</h3>
+                        <div style="border: 2px solid grey;
+                        border-radius: 5px;
+                        margin-bottom: 10px;">
+                            <hr style="width:200px" class="w3-opacity">
+                            <div class="custom-centerflex" style="width: 100%; height: 42vh;">
+                                <iframe src="" id="fbembed" scrolling="yes"
+                                    style="border:none; overflow:hidden; width: 100%; max-width: 500px; height:100%; background: white; "
+                                    allowtransparency="true" frameborder="0">
+                                </iframe>
+                            </div>
+                            <hr style="width:200px" class="w3-opacity">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,23 +211,14 @@
         </div>
         <hr style="width:90%;">
 
-        <div class="w3-content w3-justify w3-padding-64 w3-padding-large">
-            <div class="collapsible">
-                <button class="collapsibleButton w3-center w3-white w3-wide dynamicvisibility simplefade">Take a look at
-                    our facebook feed!</button>
-                <div class="content">
-                    <hr style="width:200px" class="w3-opacity">
-                    <div class="custom-centerflex" style="width: 100%; height: 70vh;">
-                        <iframe src="" id="fbembed" scrolling="yes"
-                            style="border:none; overflow:hidden; width: 100%; max-width: 500px; height:100%; background: white; "
-                            allowtransparency="true" frameborder="0">
-                        </iframe>
-                    </div>
-                    <hr style="width:200px" class="w3-opacity">
-                </div>
+        <div class="w3-white">
+            <div class="w3-content w3-justify w3-padding-large w3-padding-64">
+                <a href="#main"><button class="hollow dynamicvisibility simplefade" style="min-width: 100%;">Back to
+                        Top</button>
+                </a>
             </div>
         </div>
-
+        <hr style="width:90%;">
         <!-- Footer -->
         <div id="footer"></div>
 
@@ -216,7 +230,6 @@
 <script src="APIKEY.js"></script>
 <script src="frontend.js"></script>
 
-<object data="Home/homeparagraph.txt" onload="LoadHomeParagraph(this);this.remove();"></object>
 <object data="Home/schedule.txt" onload="LoadSchedule(this);this.remove();"></object>
 <object data="Home/location.txt" onload="LoadLocation(this);this.remove();"></object>
 <object data="footer.html" onload="LoadFooter(this);this.remove();"></object>
