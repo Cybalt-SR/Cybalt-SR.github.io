@@ -15,13 +15,16 @@ function updatefbembed() {
 }
 
 //Collapsible Objects Setup
-SetupButtons();
+
+  window.addEventListener('load', function () {
+    SetupButtons();
+  })
 
 function SetupButtons() {
+  console.log("Setting-up Buttons (1)");
   var coll = document.getElementsByClassName("collapsibleButton");
-  var i;
 
-  for (i = 0; i < coll.length; i++) {
+  for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
       this.classList.toggle("active");
       var content = this.nextElementSibling;
@@ -33,12 +36,12 @@ function SetupButtons() {
       setTimeout(UpdateDynamicVisObjs, 150);
     });
   }
-
   var toggleables = document.getElementsByClassName("toggleable");
-  var i;
+  for (var i = 0; i < toggleables.length; i++) {
+    var clickable = toggleables[i];
 
-  for (i = 0; i < toggleables.length; i++) {
-    toggleables[i].addEventListener("click", function () {
+    console.log("Init Toggleable: " + i);
+    clickable.addEventListener("click", function () {
       this.classList.toggle("active");
     });
   }
@@ -80,10 +83,19 @@ function prepContent(data) {
 }
 
 // ================= Youtube API ================= //
-var yt_api_key = GetAPIKEY();
+var yt_api_key = '';
+
+try {
+  yt_api_key = GetAPIKEY();
+} catch (err) {
+  yt_api_key = 'null';
+}
 
 //TITLE GETTER
 function GetTitle(yt_video_id, element, func) {
+  if (yt_api_key == 'null')
+    return "null title";
+
   var yt_snippet_endpoint = "https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + yt_video_id + "&key=" + yt_api_key;
 
   $.getJSON(yt_snippet_endpoint)
@@ -141,7 +153,9 @@ function InitFeedVideos(data) {
 var yt_playlist_id = 'PLoS_G_Bd60ex0W6ihfqMbd6fa5i6mbdJS';
 var yt_playlist_endpoint = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=" + yt_playlist_id + "&key=" + yt_api_key;
 console.log(yt_playlist_endpoint);
-$.getJSON(yt_playlist_endpoint, function (data) { InitPlaylistVideos(data); });
+
+if (yt_api_key != 'null')
+  $.getJSON(yt_playlist_endpoint, function (data) { InitPlaylistVideos(data); });
 
 //THUMBNAIL SETTER FOR PLAYLIST VIDEOS
 function InitPlaylistVideos(data) {
@@ -179,7 +193,7 @@ function LoadFooter(obj) {
   setTimeout(LoadFooterInfoInserter, 100);
 }
 
-function LoadFooterInfoInserter(){
+function LoadFooterInfoInserter() {
   var infoinserter = '<object data="footerinfo.txt" onload="LoadFooterInfo(this);this.remove();"></object>';
   document.getElementById("footer").innerHTML += infoinserter;
 }
