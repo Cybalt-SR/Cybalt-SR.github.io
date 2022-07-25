@@ -29,6 +29,3 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - run: node -e "console.log(process.env.MY_SECRET1)"
-    env:
-      GOOGLEAPI: ${{ secrets.GOOGLEAPI }}
