@@ -1,6 +1,19 @@
-/* Sections and headings */
+/* ======== Icon defaults ======== */
+i {
+    aspect-ratio: 1/1;
+    padding: 3px;
+}
 
-.custom-centerflex{
+/* ======== Flex containers ======== */
+.custom-rightflex {
+    justify-content: right;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.custom-centerflex {
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -8,9 +21,49 @@
     flex-wrap: wrap;
 }
 
-.custom-homenav a{
-    min-width: 150px;
+/* ======== NAVIGATION ======== */
+#nav > *:first-child{
+    top: -100%;
+    transition: 0.3s;
 }
+
+#nav.active > *:first-child{
+    top: 0;
+}
+
+.custom-homenav>*:first-child {
+    position: absolute;
+    left: 0;
+}
+
+.custom-homenav * {
+    min-width: fit-content;
+}
+
+#sidebar > *:first-child{
+    right: -100%;
+    transition: 0.3s;
+}
+
+#sidebar.active > *:first-child{
+    right: 0;
+}
+
+#sidebar *{
+    list-style: none;
+    text-decoration: none !important;
+}
+
+#sidebar ul{
+    padding-inline-start: 20px;
+}
+
+#sidebar li:hover{
+    background-color: white;
+    color: black;
+}
+
+/* ======== Headers ======== */
 
 .header>section {
     width: 100%;
@@ -50,7 +103,7 @@
     left: 0;
 }
 
-/* Buttons and links */
+/* ======== Buttons and Links ======== */
 
 .hollow {
     background: none;
@@ -77,6 +130,70 @@
     background: white;
 }
 
+/* ======== BUTTON GRADIENTS ======== */
+.buttongradient {
+    padding: 5px;
+}
+
+.buttongradient>div {
+    background-position: bottom;
+    background-size: cover;
+
+    position: relative;
+    padding: 5px 20px 10px 20px;
+    border-radius: 20px;
+
+    height:  100px;
+    transform: translateY(0);
+    transition: 0.3s;
+
+    filter: drop-shadow(0, 0, 30px, rgba(0,0,0,1));
+}
+
+.buttongradient:hover>div {
+    transform: translateY(-15px);
+    height: 150px;
+}
+
+.buttongradient>div>div {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.3s;
+}
+
+.buttongradient:hover>div>div {
+    transform: translateY(0);
+    opacity: 100;
+}
+
+.buttongradient>div::before {
+    background: linear-gradient(0deg, rgb(101, 138, 0) 0%, #00000000 60%);
+    content: " ";
+    display: block;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    opacity: 0;
+
+    transition: opacity 0.3s;
+}
+
+.buttongradient>div>div {
+    width: calc(100% - 40px);
+    position: absolute;
+    bottom: 20px;
+}
+
+.buttongradient:hover>div::before {
+    opacity: 1;
+}
+
+/* ======== FOOTER ======== */
+
 footer a {
     transition: color 0.3s;
 }
@@ -85,7 +202,7 @@ footer a:hover {
     color: black;
 }
 
-/* embeds */
+/* ======== EMBEDS ======== */
 .feedVideoEmbed,
 .videoThumbnail {
     aspect-ratio: 16/9;
@@ -142,7 +259,7 @@ footer a:hover {
     opacity: 1;
 }
 
-/* Collapsible Styles */
+/* ======== COLLAPSIBLE ======== */
 /* note: class '.active' is the universal toggler class */
 .collapsible {
     border: 2px solid grey;
@@ -175,8 +292,7 @@ footer a:hover {
     margin-top: 0;
 }
 
-/* Toggleables Styles */
-
+/* ======== TOGGLEABLE ======== */
 /* Dynamic Visibility Styles */
 .dynamicvisibility.simplefade {
     transform: translate(0, 5vh);
@@ -220,56 +336,4 @@ footer a:hover {
 .dynamicvisibility.flashbar.visible::before {
     transform: scaleX(0);
     transform-origin: bottom right;
-}
-
-/* Button Gradients Styles */
-.buttongradient {
-    padding: 5px;
-}
-
-.buttongradient>div {
-    background-position: bottom;
-    background-size: cover;
-
-    position: relative;
-    padding: 10px 20px 20px 20px;
-    border-radius: 20px;
-
-    transform: translateY(0);
-    transition: 0.3s;
-}
-
-.buttongradient:hover>div {
-    transform: translateY(-15px)
-}
-
-.buttongradient>div>div {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 0.3s;
-}
-
-.buttongradient:hover>div>div {
-    transform: translateY(0);
-    opacity: 100;
-}
-
-.buttongradient>div::before {
-    background: linear-gradient(0deg, rgba(4, 100, 4, 0.95) 0%, #00000000 60%);
-    content: " ";
-    display: block;
-    border-radius: 20px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    opacity: 0;
-
-    transition: opacity 0.3s;
-}
-
-.buttongradient:hover>div::before {
-    opacity: 1;
 }

@@ -1,7 +1,4 @@
-Brgy. Tagapo,
-National Highway
-Sta. Rosa, Laguna,
-Philippines
-
+Brgy. Tagapo, National Highway
+Sta. Rosa, Laguna, Philippines
 +63 [number here]
 email@email.com

@@ -1,20 +1,4 @@
-// update FB Embed
-updatefbembed();
-window.addEventListener("resize", updatefbembed);
-
-function updatefbembed() {
-  var embed = document.getElementById('fbembed');
-
-  if (embed != null) {
-    var newsrc = 'https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F306639766125525&width=';
-    newsrc += embed.offsetWidth + '';
-    newsrc += '&colorscheme=light&show_faces=true&border_color&stream=true&small_header=true&hide_cover=true&height=';
-    newsrc += embed.offsetHeight + '';
-    embed.src = newsrc;
-  }
-}
-
-//Collapsible Objects Setup
+// ============= Custom Buttoms Setup ============= //
 
 window.addEventListener('load', function () {
   SetupButtons();
@@ -26,7 +10,7 @@ function SetupButtons() {
 
   for (var i = 0; i < coll.length; i++) {
     UpdateCollapsible(coll[i]);
-    
+
     coll[i].addEventListener("click", function () {
       this.classList.toggle("active");
       UpdateCollapsible(this);
@@ -53,7 +37,7 @@ function UpdateCollapsible(caller_button) {
   setTimeout(UpdateDynamicVisObjs, 150);
 }
 
-//Scroll Visibility
+// ================== Scroll Visibility ================== //
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -83,7 +67,8 @@ function UpdateDynamicVisObjs() {
 
 $(document).on("scroll", function () { UpdateDynamicVisObjs(); });
 
-//automated content insertion
+// ================= automated content insertion ================= //
+
 function prepContent(data) {
   return data.contentWindow.document.body.innerHTML.substring(59).slice(0, -6);
 }
@@ -115,7 +100,7 @@ function GetTitle(yt_video_id, element, func) {
     });
 }
 
-// ====== YOUTUBE FEEDS RELIANT ====== //
+// ================= YOUTUBE FEEDS RELIANT ================= //
 var cid = 'UCMKaNzK1FpuLunon71O693w';
 var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=") + cid;
 console.log(reqURL);
@@ -156,6 +141,7 @@ function InitFeedVideos(data) {
   }
 }
 
+// ================= YOUTUBE PLAYLIST RELIANT ================= //
 var yt_playlist_id = 'PLoS_G_Bd60ex0W6ihfqMbd6fa5i6mbdJS';
 var yt_playlist_endpoint = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=" + yt_playlist_id + "&key=" + yt_api_key;
 console.log(yt_playlist_endpoint);
@@ -184,15 +170,23 @@ function InitPlaylistVideos(data) {
   }
 }
 
-// ====== YOUTUBE PLAYLIST RELIANT ====== //
+// ================= update FB Embed ================= //
+updatefbembed();
+window.addEventListener("resize", updatefbembed);
 
-//get playlist items link:
-//https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=9&playlistId=PLL1ekZ31_Q4Lhjvq1F30ModgubXGMrL61&key=AIzaSyBT54ZwWyTt-U23kAEBKYptpKjIoAIhZYs
+function updatefbembed() {
+  var embed = document.getElementById('fbembed');
 
-// ================= +++++++++++++++ ================= //
+  if (embed != null) {
+    var newsrc = 'https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F306639766125525&width=';
+    newsrc += embed.offsetWidth + '';
+    newsrc += '&colorscheme=light&show_faces=true&border_color&stream=true&small_header=true&hide_cover=true&height=';
+    newsrc += embed.offsetHeight + '';
+    embed.src = newsrc;
+  }
+}
 
-//footer insertion
-
+// ================= SECTION LOADERS ================= //
 function LoadFooter(obj) {
   document.getElementById("footer").innerHTML = obj.contentWindow.document.body.innerHTML;
 
@@ -218,17 +212,37 @@ function LoadFooterInfo(obj) {
   document.getElementById("footerinfo").innerHTML = addition + "";
 }
 
+var nav = document.getElementById("nav");
+var customNav = document.getElementById("custom-homenav");
+
 function LoadNav(obj) {
-  document.getElementById("nav").innerHTML = obj.contentWindow.document.body.innerHTML;
+  nav.children[0].innerHTML = obj.contentWindow.document.body.innerHTML;
+
+  if (customNav != null) {
+    customNav.innerHTML = obj.contentWindow.document.body.children[0].innerHTML;
+    $(document).on("scroll", function () { UpdateNavVisibility(); });
+  } else if (nav.classList.contains('active') == false) {
+    nav.classList.toggle('active');
+  }
 }
 
-// FB embed insertion
+// Nav Dynamic Show
+function UpdateNavVisibility() {
+  if (customNav.classList.contains('visible')) {
+    if (nav.classList.contains('active')) {
+      nav.classList.toggle('active');
+    }
+  } else if (nav.classList.contains('active') == false) {
+    nav.classList.toggle('active');
+  }
+}
 
-/* Temp area
+var sidebar = document.getElementById("sidebar");
 
-var mainwindow = document.getElementById('fbembed').contentWindow.document.body;
-.children[0].children[0].children[0].children[0].children[0];
-  var header = mainwindow.children[0].children[0];
+function LoadSidebar(obj) {
+  sidebar.innerHTML = obj.contentWindow.document.body.innerHTML;
+}
 
-*/
-
+function ToggleSidebar() {
+  sidebar.classList.toggle('active');
+}

@@ -57,24 +57,6 @@ h6 {
     margin-bottom: 12px !important
 }
 
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {
-    width: 120px !important;
-    background: black !important;
-}
-
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {
-    margin-left: 120px !important
-}
-
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {
-    #main {
-        margin-left: 0 !important
-    }
-}
-
 /* END of Template Specific */
 
 article,
@@ -592,6 +574,7 @@ a {
     width: 200px;
     background-color: #fff;
     position: fixed !important;
+    right: 0;
     z-index: 1;
     overflow: auto;
     overflow-x: hidden;
@@ -778,56 +761,6 @@ a {
     width: 99.99999%
 }
 
-@media (min-width:993px) {
-    .w3-col.l1 {
-        width: 8.33333%
-    }
-
-    .w3-col.l2 {
-        width: 16.66666%
-    }
-
-    .w3-col.l3 {
-        width: 24.99999%
-    }
-
-    .w3-col.l4 {
-        width: 33.33333%
-    }
-
-    .w3-col.l5 {
-        width: 41.66666%
-    }
-
-    .w3-col.l6 {
-        width: 49.99999%
-    }
-
-    .w3-col.l7 {
-        width: 58.33333%
-    }
-
-    .w3-col.l8 {
-        width: 66.66666%
-    }
-
-    .w3-col.l9 {
-        width: 74.99999%
-    }
-
-    .w3-col.l10 {
-        width: 83.33333%
-    }
-
-    .w3-col.l11 {
-        width: 91.66666%
-    }
-
-    .w3-col.l12 {
-        width: 99.99999%
-    }
-}
-
 .w3-rest {
     overflow: hidden
 }
@@ -883,97 +816,6 @@ a {
 
 .w3-show-inline-block {
     display: inline-block !important
-}
-
-@media (max-width:1205px) {
-    .w3-auto {
-        max-width: 95%
-    }
-}
-
-@media (max-width:600px) {
-    .w3-modal-content {
-        margin: 0 10px;
-        width: auto !important
-    }
-
-    .w3-modal {
-        padding-top: 30px
-    }
-
-    .w3-dropdown-hover.w3-mobile .w3-dropdown-content,
-    .w3-dropdown-click.w3-mobile .w3-dropdown-content {
-        position: relative
-    }
-
-    .w3-hide-small {
-        display: none !important
-    }
-
-    .w3-mobile {
-        display: block;
-        width: 100% !important
-    }
-
-    .w3-bar-item.w3-mobile,
-    .w3-dropdown-hover.w3-mobile,
-    .w3-dropdown-click.w3-mobile {
-        text-align: center
-    }
-
-    .w3-dropdown-hover.w3-mobile,
-    .w3-dropdown-hover.w3-mobile .w3-btn,
-    .w3-dropdown-hover.w3-mobile .w3-button,
-    .w3-dropdown-click.w3-mobile,
-    .w3-dropdown-click.w3-mobile .w3-btn,
-    .w3-dropdown-click.w3-mobile .w3-button {
-        width: 100%
-    }
-}
-
-@media (max-width:768px) {
-    .w3-modal-content {
-        width: 500px
-    }
-
-    .w3-modal {
-        padding-top: 50px
-    }
-}
-
-@media (min-width:993px) {
-    .w3-modal-content {
-        width: 900px
-    }
-
-    .w3-hide-large {
-        display: none !important
-    }
-
-    .w3-sidebar.w3-collapse {
-        display: block !important
-    }
-}
-
-@media (max-width:992px) and (min-width:601px) {
-    .w3-hide-medium {
-        display: none !important
-    }
-}
-
-@media (max-width:992px) {
-    .w3-sidebar.w3-collapse {
-        display: none
-    }
-
-    .w3-main {
-        margin-left: 0 !important;
-        margin-right: 0 !important
-    }
-
-    .w3-auto {
-        max-width: 100%
-    }
 }
 
 .w3-top,
@@ -1587,7 +1429,7 @@ a {
 .w3-green,
 .w3-hover-green:hover {
     color: #fff !important;
-    background-color: #58a35a !important
+    background-color: #82b500 !important
 }
 
 .w3-light-green,
@@ -1767,7 +1609,7 @@ a {
 
 .w3-text-green,
 .w3-hover-text-green:hover {
-    color: #3d7e40 !important
+    color: #82b500 !important
 }
 
 .w3-text-light-green,
@@ -2025,15 +1867,58 @@ a {
 }
 
 /* Width dependent sizes, Moved down for accecibility */
-@media (min-width:901px) {
-    .buttongradient>div {
-        height: 180px;
+@media (min-width:993px) {
+    .w3-col.l1 {
+        width: 8.33333%
     }
 
-    .buttongradient>div>div {
-        width: calc(100% - 40px);
-        position: absolute;
-        bottom: 20px;
+    .w3-col.l2 {
+        width: 16.66666%
+    }
+
+    .w3-col.l3 {
+        width: 24.99999%
+    }
+
+    .w3-col.l4 {
+        width: 33.33333%
+    }
+
+    .w3-col.l5 {
+        width: 41.66666%
+    }
+
+    .w3-col.l6 {
+        width: 49.99999%
+    }
+
+    .w3-col.l7 {
+        width: 58.33333%
+    }
+
+    .w3-col.l8 {
+        width: 66.66666%
+    }
+
+    .w3-col.l9 {
+        width: 74.99999%
+    }
+
+    .w3-col.l10 {
+        width: 83.33333%
+    }
+
+    .w3-col.l11 {
+        width: 91.66666%
+    }
+
+    .w3-col.l12 {
+        width: 99.99999%
+    }
+}
+@media (min-width:901px) {
+    .buttongradient>div {
+        height: 120px;
     }
 
     .w3-col.m1 {
@@ -2089,9 +1974,46 @@ a {
         width: 99.99999%
     }
 }
+@media (max-width:700px) {
+    .w3-modal-content {
+        margin: 0 10px;
+        width: auto !important
+    }
 
-/* Width dependent sizes, Moved down for accecibility */
-@media (min-width:601px) {
+    .w3-modal {
+        padding-top: 30px
+    }
+
+    .w3-dropdown-hover.w3-mobile .w3-dropdown-content,
+    .w3-dropdown-click.w3-mobile .w3-dropdown-content {
+        position: relative
+    }
+
+    .w3-hide-small {
+        display: none !important
+    }
+
+    .w3-mobile {
+        display: block;
+        width: 100% !important
+    }
+
+    .w3-bar-item.w3-mobile,
+    .w3-dropdown-hover.w3-mobile,
+    .w3-dropdown-click.w3-mobile {
+        text-align: center
+    }
+
+    .w3-dropdown-hover.w3-mobile,
+    .w3-dropdown-hover.w3-mobile .w3-btn,
+    .w3-dropdown-hover.w3-mobile .w3-button,
+    .w3-dropdown-click.w3-mobile,
+    .w3-dropdown-click.w3-mobile .w3-btn,
+    .w3-dropdown-click.w3-mobile .w3-button {
+        width: 100%
+    }
+}
+@media (min-width:701px) {
     .w3-quarter.narrow {
         width: 24.99999%
     }
@@ -2102,6 +2024,56 @@ a {
 
     .w3-half.narrow {
         width: 49.99999%
+    }
+}
+@media (max-width:1205px) {
+    .w3-auto {
+        max-width: 95%
+    }
+}
+
+@media (max-width:768px) {
+    .w3-modal-content {
+        width: 500px
+    }
+
+    .w3-modal {
+        padding-top: 50px
+    }
+}
+
+@media (min-width:993px) {
+    .w3-modal-content {
+        width: 900px
+    }
+
+    .w3-hide-large {
+        display: none !important
+    }
+
+    .w3-sidebar.w3-collapse {
+        display: block !important
+    }
+}
+
+@media (max-width:992px) and (min-width:701px) {
+    .w3-hide-medium {
+        display: none !important
+    }
+}
+
+@media (max-width:992px) {
+    .w3-sidebar.w3-collapse {
+        display: none
+    }
+
+    .w3-main {
+        margin-left: 0 !important;
+        margin-right: 0 !important
+    }
+
+    .w3-auto {
+        max-width: 100%
     }
 }
 

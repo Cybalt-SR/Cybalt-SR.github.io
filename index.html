@@ -20,11 +20,13 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0"
         nonce="6ofsQoWZ"></script>
 
-    <div id="nav"></div>
+    <div id="nav">
+        <div class="w3-top"></div>
+    </div>
+    <div id="sidebar"></div>
 
     <!-- Page Content -->
     <div class="" id="main">
-
 
         <!-- Header/Home -->
         <div class="w3-content w3-container w3-padding-32 w3-center w3-white" id="home">
@@ -33,21 +35,7 @@
             </div>
         </div>
 
-        <div class="custom-homenav custom-centerflex w3-green w3-center w3-small">
-            <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-            <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
-            <div class="w3-dropdown-hover toggleable">
-                <button class="w3-bar-item w3-button">CONNECT</button>
-                <div class="w3-dropdown-content w3-bar-block w3-green item-narrow">
-                    <a href="#" class="w3-bar-item w3-button w3-item-narrow">Growth Groups</a>
-                    <a href="ministries.html" class="w3-bar-item w3-button w3-item-narrow">Ministries</a>
-                    <a href="#" class="w3-bar-item w3-button w3-item-narrow">Outreach</a>
-                    <a href="#" class="w3-bar-item w3-button w3-item-narrow">Satelite Church</a>
-                </div>
-            </div>
-            <a href="videos.html" class="w3-bar-item w3-button">VIDEOS</a>
-            <a href="gracious_giving.html" class="w3-bar-item w3-button">GIVE</a>
-            <a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
+        <div id="custom-homenav" class="dynamicvisibility">
         </div>
 
         <!--style="background-image:url('Home/homebannerimage.jpg'); background-size: cover; background-position: bottom;" -->
@@ -171,13 +159,14 @@
                 </div>
             </div>
         </div>
+        <!--
         <hr style="width:90%;">
         <div class="w3-light-grey">
             <div class="w3-content w3-justify w3-padding-large">
                 <div class="w3-row w3-section w3-left-align" style="position: relative;">
                     <a href="videos.html">
                         <div class="w3-third w3-section w3-text-white buttongradient dynamicvisibility simplefade">
-                            <div style="background-image: url('Home/buttonimage_watch.jpg');">
+                            <div class="w3-green">
                                 <h3><strong>Watch the latest videos</strong></h3>
                                 <div class="w3-small">
                                     <span>
@@ -189,7 +178,7 @@
                     </a>
                     <a href="about.html">
                         <div class="w3-third w3-section w3-text-white buttongradient dynamicvisibility simplefade">
-                            <div style="background-image: url('Home/buttonimage_watch.jpg');">
+                            <div class="w3-green">
                                 <h3><strong>Know About Us</strong></h3>
                                 <div class="w3-small">
                                     <span>
@@ -201,7 +190,7 @@
                     </a>
                     <a href="ministries.html">
                         <div class="w3-third w3-section w3-text-white buttongradient dynamicvisibility simplefade">
-                            <div style="background-image: url('Home/buttonimage_watch.jpg');">
+                            <div class="w3-green">
                                 <h3><strong>Ministries And Growth Groups</strong></h3>
                                 <div class="w3-small">
                                     <span>
@@ -211,9 +200,12 @@
                             </div>
                         </div>
                     </a>
+
                 </div>
             </div>
+
         </div>
+        -->
         <hr style="width:90%;">
 
         <div class="w3-white">
@@ -239,6 +231,7 @@
 <object data="Home/location.txt" onload="LoadLocation(this);this.remove();"></object>
 <object data="footer.html" onload="LoadFooter(this);this.remove();"></object>
 <object data="nav.html" onload="LoadNav(this);this.remove();"></object>
+<object data="sidebar.html" onload="LoadSidebar(this);this.remove();"></object>
 <script>
     function LoadHomeParagraph(obj) {
         var data = prepContent(obj);

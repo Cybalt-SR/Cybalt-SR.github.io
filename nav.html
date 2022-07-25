@@ -1,57 +1,30 @@
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-green w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-    <!-- Avatar image in top left corner -->
-    <img class="w3-xxlarge  w3-padding-16 " src="SidebarLogo.jpg" style="width:30%; opacity: 100%">
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-16">
-        <i class="fa fa-home w3-large"></i>
-        <br>HOME
-    </a>
-    <a href="about.html" class="w3-bar-item w3-button w3-padding-16">
-        <i class="fa fa-search w3-large"></i>
-        <br>ABOUT
-    </a>
-    <div class="w3-dropdown-hover toggleable">
-        <button class="w3-bar-item w3-button w3-padding-16">
-            <i class="fa fa-user w3-large"></i>
-            <br>CONNECT
-        </button>
-        <div class="w3-dropdown-content w3-bar-block item-narrow">
-            <a href="#" class="w3-bar-item w3-button w3-item-narrow">Growth Groups</a>
-            <a href="ministries.html" class="w3-bar-item w3-button w3-item-narrow">Ministries</a>
-            <a href="#" class="w3-bar-item w3-button w3-item-narrow">Outreach</a>
-            <a href="#" class="w3-bar-item w3-button w3-item-narrow">Satelite Church</a>
+<div>
+    <div class="w3-hide-small">
+        <div class="custom-homenav custom-rightflex w3-green w3-center w3-small">
+            <a href="index.html" class="w3-bar-item w3-button">GCF Santa Rosa</a>
+
+            <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+            <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
+            <div class="w3-dropdown-hover toggleable">
+                <button class="w3-bar-item w3-button">CONNECT</button>
+                <div class="w3-dropdown-content w3-bar-block w3-green item-narrow">
+                    <a href="#" class="w3-bar-item w3-button w3-item-narrow">Growth Groups</a>
+                    <a href="ministries.html" class="w3-bar-item w3-button w3-item-narrow">Ministries</a>
+                    <a href="#" class="w3-bar-item w3-button w3-item-narrow">Outreach</a>
+                    <a href="#" class="w3-bar-item w3-button w3-item-narrow">Satelite Church</a>
+                </div>
+            </div>
+            <a href="videos.html" class="w3-bar-item w3-button">VIDEOS</a>
+            <a href="gracious_giving.html" class="w3-bar-item w3-button">GIVE</a>
+            <a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
         </div>
     </div>
-    <a href="videos.html" class="w3-bar-item w3-button w3-padding-16">
-        <i class="fa fa-play-circle w3-large"></i>
-        <br>VIDEOS
-    </a>
-    <a href="contact.html" class="w3-bar-item w3-button w3-padding-16">
-        <i class="fa fa-envelope w3-large"></i>
-        <br>CONTACT
-    </a>
-    <a href="gracious_giving.html" class="w3-bar-item w3-button w3-padding-16">
-        <i class="fa fa-heart w3-large"></i>
-        <br>GIVE
-    </a>
-</nav>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-    <div class="w3-green w3-center w3-small">
-        <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-        <a href="about.html" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-        <div class="w3-dropdown-hover toggleable toggleable-child">
-            <button class="w3-bar-item w3-button">CONNECT</button>
-            <div class="w3-dropdown-content w3-bar-block w3-item-narrow">
-                <a href="#" class="w3-bar-item w3-button">Growth Groups</a>
-                <a href="ministries.html" class="w3-bar-item w3-button">Ministries</a>
-                <a href="#" class="w3-bar-item w3-button">Outreach</a>
-                <a href="#" class="w3-bar-item w3-button">Satelite Church</a>
-            </div>
+    <div class=" w3-hide-large w3-hide-medium">
+        <div class="custom-homenav custom-rightflex w3-green w3-center w3-small">
+            <a href="index.html" class="w3-bar-item w3-button">GCF Santa Rosa</a>
+            <a onclick="ToggleSidebar();"><i class="w3-bar-item w3-button fa fa-bars w3-large"></i></a>
         </div>
-        <a href="videos.html" class="w3-bar-item w3-button" style="width:25% !important">VIDEOS</a>
-        <a href="contact.html" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-        <a href="gracious_giving.html" class="w3-bar-item w3-button" style="width:25% !important">GIVE</a>
     </div>
 </div>
