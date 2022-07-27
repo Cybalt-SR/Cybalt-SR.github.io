@@ -43,14 +43,17 @@ body {
 }
 
 /* Template Specific */
-body,
+body{
+    font-family: "Montserrat", sans-serif !important
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: "Montserrat", sans-serif !important
+    font-family: "Oswald", sans-serif !important
 }
 
 .w3-row-padding img {

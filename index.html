@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="mainNoSidebar.css">
     <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -79,9 +80,9 @@
         <hr style="width:90%;">
         <div class="w3-light-grey">
             <div class="w3-content w3-justify w3-padding-16">
-                <h3 class="dynamicvisibility simplefade"><strong>
+                <h2 class="dynamicvisibility simplefade"><strong>
                         <center class="w3-text-green">Schedules</center>
-                    </strong></h3>
+                    </strong></h2>
                 <div id="schedule" class="w3-row dynamicvisibility simplefade" style="max-width: 700px; margin: auto;">
                     <div class="w3-half narrow w3-padding-16">
                         <center>
@@ -97,9 +98,9 @@
                     </div>
                 </div>
                 <hr style="width:90%;">
-                <h3 class="dynamicvisibility simplefade"><strong>
+                <h2 class="dynamicvisibility simplefade"><strong>
                         <center class="w3-text-green">Location</center>
-                    </strong></h3>
+                    </strong></h2>
                 <div id="location" class="dynamicvisibility simplefade" style="max-width: 700px; margin: auto;">
                     <center>
 
@@ -112,8 +113,29 @@
                             Map</button>
                         <div class="content">
                             <hr style="width:200px" class="w3-opacity">
-                            <div class="custom-centerflex" style="width: 100%; height: 70vh;">
-                                <img alt="map img goes here" src="Home/map_img.jpg">
+                            <div class="custom-centerflex" style="width: 100%; height: 70vh; min-height: 600px;">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas"
+                                            src="https://maps.google.com/maps?q=Robinsons%20Sta.%20Rosa&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                        <style>
+                                            .mapouter {
+                                                position: relative;
+                                                text-align: right;
+                                                height: 500px;
+                                                width: 514px;
+                                            }
+                                        </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                                        <style>
+                                            .gmap_canvas {
+                                                overflow: hidden;
+                                                background: none !important;
+                                                height: 500px;
+                                                width: 514px;
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
                             </div>
                             <hr style="width:200px" class="w3-opacity">
                         </div>
@@ -127,7 +149,7 @@
 
                 <div class="w3-row w3-padding-16 w3-section">
                     <div class="w3-half w3-section">
-                        <h3 class="dynamicvisibility simplefade w3-text-green">Latest Video</h3>
+                        <h2 class="dynamicvisibility simplefade w3-text-green">Latest Video</h2>
                         <div class="w3-margin-right">
                             <iframe class="feedVideoEmbed" vnum='0' width="100%" height="100%" frameborder="0"
                                 allowfullscreen id="maindisplay"></iframe>
@@ -142,7 +164,7 @@
                         </div>
                     </div>
                     <div class="w3-half w3-section">
-                        <h3 class="dynamicvisibility simplefade w3-text-green">Facebook Feed</h3>
+                        <h2 class="dynamicvisibility simplefade w3-text-green">Facebook Feed</h2>
                         <div style="border: 2px solid grey;
                         border-radius: 5px;
                         margin-bottom: 10px;">
@@ -167,7 +189,7 @@
                     <a href="videos.html">
                         <div class="w3-third w3-section w3-text-white buttongradient dynamicvisibility simplefade">
                             <div class="w3-green">
-                                <h3><strong>Watch the latest videos</strong></h3>
+                                <h2><strong>Watch the latest videos</strong></h2>
                                 <div class="w3-small">
                                     <span>
                                         Catch up on our latest updates or rewatch sermons.
@@ -179,7 +201,7 @@
                     <a href="about.html">
                         <div class="w3-third w3-section w3-text-white buttongradient dynamicvisibility simplefade">
                             <div class="w3-green">
-                                <h3><strong>Know About Us</strong></h3>
+                                <h2><strong>Know About Us</strong></h2>
                                 <div class="w3-small">
                                     <span>
                                         Know who we are and what we stand for.
@@ -191,7 +213,7 @@
                     <a href="ministries.html">
                         <div class="w3-third w3-section w3-text-white buttongradient dynamicvisibility simplefade">
                             <div class="w3-green">
-                                <h3><strong>Ministries And Growth Groups</strong></h3>
+                                <h2><strong>Ministries And Growth Groups</strong></h2>
                                 <div class="w3-small">
                                     <span>
                                         See our church ministries and groups you can join.
